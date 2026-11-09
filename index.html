@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10283f">
+<meta name="description" content="MGDBHSS, Kundara — school information, announcements, student activities and community programmes.">
+<title>MGDBHSS | Kundara</title>
+<style>
+:root{
+  --navy:#10283f;--navy2:#173c59;--blue:#26769a;--cyan:#8ed8df;
+  --gold:#e8bd68;--cream:#f7f5ef;--paper:#f4f7f9;--white:#fff;
+  --ink:#172b3b;--muted:#687b89;--line:#e3eaf0;--shadow:0 18px 55px rgba(13,39,60,.10);
+  --r:22px;--max:1180px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+.topbar{background:#0a1d2e;color:#d7e5ed;font-size:11px;letter-spacing:.04em}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding:8px 0}
+.topbar strong{color:var(--gold);font-weight:750}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(220,230,237,.8)}
+.head{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.logo{height:54px;width:54px;flex:none;border-radius:16px;background:linear-gradient(145deg,var(--navy),#285a79);display:grid;place-items:center;color:#fff;font-weight:900;font-size:11px;line-height:1.15;text-align:center;box-shadow:0 8px 20px #10283f30;border:2px solid #e7c77e}
+.brand-title{font-size:18px;font-weight:900;letter-spacing:.06em;color:var(--navy);line-height:1.2}
+.brand-sub{font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+nav{display:flex;align-items:center;gap:24px;font-size:12px;font-weight:750;color:#40576a}
+nav a{position:relative;padding:8px 0}
+nav a:not(.nav-btn):after{content:"";position:absolute;left:0;bottom:2px;width:0;height:2px;background:var(--gold);transition:width .25s}
+nav a:hover:after{width:100%}
+.nav-btn{background:var(--navy);color:white;padding:11px 17px;border-radius:10px;transition:.25s}
+.nav-btn:hover{background:var(--blue);transform:translateY(-2px)}
+.menu{display:none;border:1px solid var(--line);background:white;border-radius:11px;padding:9px 12px;color:var(--navy);font-size:20px}
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:590px;display:flex;align-items:center;color:white;background:linear-gradient(110deg,rgba(8,29,47,.96),rgba(16,55,79,.88) 55%,rgba(25,89,111,.72)),radial-gradient(ellipse at 80% 20%,#60b6bf 0,transparent 34%),linear-gradient(135deg,#10283f,#245d78)}
+.hero:before,.hero:after{content:"";position:absolute;z-index:-1;border:1px solid rgba(255,255,255,.13);border-radius:50%;animation:orbit 24s linear infinite}
+.hero:before{width:560px;height:560px;right:-110px;top:-190px;box-shadow:0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.02)}
+.hero:after{width:350px;height:350px;right:150px;bottom:-240px;animation-direction:reverse}
+.hero .wrap{position:relative}
+.hero-content{max-width:740px;padding:92px 0 105px;animation:rise .9s both}
+.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);border-radius:99px;padding:7px 13px;color:#f4d99d;font-size:10px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}
+.pill i{width:7px;height:7px;background:#83d7b5;border-radius:50%;box-shadow:0 0 0 5px #83d7b526}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.03;letter-spacing:-.055em;margin:24px 0 20px;font-weight:900}
+h1 span{color:var(--gold)}
+.hero p{max-width:580px;color:#d5e3eb;font-size:16px;line-height:1.8;margin:0 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:11px;font-size:12px;font-weight:850;transition:transform .25s,background .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px)}
+.btn-gold{background:var(--gold);color:#142c40;box-shadow:0 10px 25px #e8bd6830}
+.btn-ghost{border:1px solid #ffffff75;color:white;background:#ffffff0c}
+.hero-note{position:absolute;right:0;bottom:55px;width:215px;padding:18px;border:1px solid #ffffff35;background:#ffffff12;backdrop-filter:blur(12px);border-radius:17px;animation:rise 1.1s .2s both}
+.hero-note small{display:block;color:#f2d99e;text-transform:uppercase;letter-spacing:.14em;font-size:9px;font-weight:850}
+.hero-note strong{display:block;font-size:15px;margin-top:6px;line-height:1.4}
+.ticker{background:var(--gold);color:#142b3e;overflow:hidden;white-space:nowrap}
+.ticker-inner{display:flex;width:max-content;animation:marquee 30s linear infinite;padding:10px 0;font-size:11px;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
+.ticker-inner span{padding:0 34px}
+.ticker-inner b{color:#fff;margin-right:10px}
+.section{padding:88px 0}
+.section.alt{background:#fff}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:30px}
+.eyebrow{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);font-weight:900}
+h2{font-size:clamp(29px,3.5vw,43px);line-height:1.12;letter-spacing:-.045em;color:var(--navy);margin:9px 0 0;font-weight:900}
+.lead{color:var(--muted);font-size:14px;max-width:570px;margin:12px 0 0}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+.about-copy p{font-size:14px;color:#5e7180;line-height:1.9}
+.photo-frame{position:relative;min-height:355px;border-radius:25px;overflow:hidden;background:linear-gradient(140deg,#dfeaf0,#a9c6d2);box-shadow:var(--shadow)}
+.photo-frame:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,#10283f30,#10283f05),radial-gradient(circle at 72% 25%,#ffffffa0,transparent 22%)}
+.photo-frame .placeholder{position:absolute;inset:0;display:grid;place-content:center;text-align:center;color:#31546a;font-size:13px;font-weight:800;letter-spacing:.06em}
+.photo-frame .placeholder span{font-size:42px;margin-bottom:7px}
+.photo-caption{position:absolute;left:18px;right:18px;bottom:18px;padding:15px 17px;border-radius:14px;background:#10283fdb;color:white;backdrop-filter:blur(8px)}
+.photo-caption small{color:#e8c879;font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-weight:850}
+.photo-caption strong{display:block;margin-top:4px;font-size:14px}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:25px}
+.value{border:1px solid var(--line);background:#fff;border-radius:14px;padding:15px}
+.value strong{display:block;color:var(--navy);font-size:13px}
+.value span{color:var(--muted);font-size:11px}
+.announcement-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:stretch}
+.announce-intro{background:var(--navy);color:white;border-radius:23px;padding:32px;position:relative;overflow:hidden}
+.announce-intro:after{content:"";position:absolute;width:220px;height:220px;border:1px solid #ffffff20;border-radius:50%;right:-100px;bottom:-100px;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff05}
+.announce-intro .eyebrow{color:var(--gold)}
+.announce-intro h2{color:white;font-size:34px}
+.announce-intro p{font-size:13px;color:#c6d5df;max-width:300px}
+.announce-intro .mini{margin-top:35px;font-size:10px;color:#f2d99e;letter-spacing:.12em;text-transform:uppercase;font-weight:850}
+.notice-list{display:grid;gap:12px}
+.notice{background:white;border:1px solid var(--line);border-radius:16px;padding:19px 20px;display:grid;grid-template-columns:62px 1fr;gap:16px;transition:.25s;box-shadow:0 7px 24px #10283f08}
+.notice:hover{transform:translateX(5px);box-shadow:var(--shadow);border-color:#c8d9e4}
+.notice-date{border-radius:12px;background:#eef4f7;color:var(--navy);display:grid;place-content:center;text-align:center;min-height:58px}
+.notice-date b{font-size:20px;line-height:1.1}
+.notice-date span{font-size:9px;letter-spacing:.1em;font-weight:850;text-transform:uppercase}
+.notice h3{font-size:14px;color:var(--navy);margin:0 0 4px}
+.notice p{font-size:11px;color:var(--muted);margin:0}
+.tag{display:inline-block;margin-top:8px;font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#936c20;background:#fff4d9;padding:4px 7px;border-radius:5px;font-weight:900}
+.program-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.program{position:relative;overflow:hidden;border-radius:20px;padding:27px;background:white;border:1px solid var(--line);box-shadow:0 10px 32px #10283f08;transition:transform .3s,box-shadow .3s}
+.program:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.program-top{display:flex;justify-content:space-between;align-items:center}
+.program-icon{height:48px;width:48px;border-radius:15px;display:grid;place-items:center;background:#edf5f7;color:var(--blue);font-size:23px}
+.program-label{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--blue);font-weight:900}
+.program h3{font-size:22px;color:var(--navy);margin:17px 0 8px}
+.program p{font-size:13px;color:var(--muted);margin:0;max-width:490px}
+.program .learn{display:inline-flex;margin-top:18px;color:var(--blue);font-size:11px;font-weight:850}
+.program.souhritha{background:linear-gradient(135deg,#fff,#f0f8f7)}
+.program.nss{background:linear-gradient(135deg,#fff,#f1f5fb)}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feature{padding:23px;border:1px solid var(--line);border-radius:17px;background:white;transition:.25s}
+.feature:hover{transform:translateY(-5px);border-color:#c9dce5}
+.feature .symbol{font-size:22px;color:var(--blue)}
+.feature h3{font-size:14px;color:var(--navy);margin:11px 0 5px}
+.feature p{font-size:11px;color:var(--muted);margin:0}
+.gallery-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:14px}
+.gallery-item{min-height:190px;border-radius:17px;background:linear-gradient(135deg,#dce9ef,#a9c4d1);display:grid;place-items:center;text-align:center;color:#34586d;font-size:11px;font-weight:850;letter-spacing:.08em;border:1px dashed #9bb5c4}
+.gallery-item:first-child{min-height:240px;grid-row:span 2}
+.gallery-item span{display:block;font-size:30px;margin-bottom:8px}
+.contact-band{background:linear-gradient(110deg,#10283f,#1d5774);color:white;border-radius:24px;padding:34px 38px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.contact-band h2{color:white;font-size:29px}
+.contact-band p{color:#c8d8e2;font-size:12px;margin:9px 0 0}
+footer{background:#091d2d;color:#dce7ed;padding:52px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}
+footer h3{color:white;font-size:14px;margin:0 0 13px}
+footer p,footer a{font-size:11px;color:#afc1cd}
+footer a{display:block;margin:8px 0}
+.footer-brand{font-size:18px;font-weight:900;letter-spacing:.06em;color:white}
+.copyright{border-top:1px solid #ffffff20;margin-top:35px;padding-top:17px;font-size:10px;color:#8da4b3;display:flex;justify-content:space-between;gap:12px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+@media(max-width:900px){
+ nav{gap:14px;font-size:11px}.hero-note{display:none}.about-grid{gap:25px}
+ .announcement-layout{grid-template-columns:1fr}.announce-intro{padding:27px}
+}
+@media(max-width:720px){
+ .wrap{width:min(var(--max),calc(100% - 32px))}
+ .topbar .wrap{font-size:9px}.head{height:72px}
+ .menu{display:block}
+ nav{display:none;position:absolute;left:0;right:0;top:72px;background:#fff;padding:15px 22px 22px;border-bottom:1px solid var(--line);box-shadow:0 15px 25px #10283f12;flex-direction:column;align-items:stretch;gap:7px}
+ nav.open{display:flex}nav a{padding:10px 4px}.nav-btn{text-align:center;margin-top:5px}
+ .hero{min-height:530px}.hero-content{padding:78px 0 85px}
+ .hero p{font-size:14px}.section{padding:64px 0}
+ .about-grid{grid-template-columns:1fr}.photo-frame{min-height:280px;order:-1}
+ .values{gap:8px}.value{padding:12px}.value strong{font-size:11px}.value span{font-size:10px}
+ .program-grid{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr 1fr}
+ .gallery-grid{grid-template-columns:1fr 1fr}.gallery-item:first-child{grid-column:span 2;grid-row:auto;min-height:200px}
+ .contact-band{padding:27px;align-items:flex-start;flex-direction:column}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+ .topbar .wrap span:last-child{display:none}
+ .brand-title{font-size:16px}.brand-sub{font-size:9px}.logo{width:47px;height:47px}
+ h1{font-size:46px}.hero{min-height:510px}
+ .section-head{display:block}.feature-grid{grid-template-columns:1fr}
+ .notice{grid-template-columns:53px 1fr;padding:15px;gap:12px}
+ .notice-date{min-height:53px}.notice-date b{font-size:18px}
+ .footer-grid{grid-template-columns:1fr;gap:20px}
+ .copyright{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span><strong>MGDBHSS</strong> &nbsp;|&nbsp; Kundara, Kerala</span><span>Learning • Service • Community</span></div></div>
+<header>
+ <div class="wrap head">
+  <a class="brand" href="#home" aria-label="MGDBHSS homepage">
+   <div class="logo">SCHOOL<br>CREST</div>
+   <div><div class="brand-title">MGDBHSS</div><div class="brand-sub">Kundara · Kerala</div></div>
+  </a>
+  <button class="menu" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav id="mainNav">
+   <a href="#home">Home</a><a href="#about">About</a><a href="#announcements">Notices</a><a href="#clubs">Clubs & Service</a><a href="#campus">Campus life</a><a href="#contact" class="nav-btn">Contact</a>
+  </nav>
+ </div>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="wrap">
+  <div class="hero-content">
+   <div class="pill"><i></i> Welcome to MGDBHSS · Kundara</div>
+   <h1>Inspiring minds.<br><span>Shaping futures.</span></h1>
+   <p>A place where learning, character and community come together. Explore school updates, student activities and the programmes that make our school community special.</p>
+   <div class="actions"><a class="btn btn-gold" href="#announcements">View announcements <span>↗</span></a><a class="btn btn-ghost" href="#about">Discover our school</a></div>
+  </div>
+  <div class="hero-note"><small>Our school community</small><strong>Learn with purpose.<br>Grow through service.</strong></div>
+ </div>
+</section>
+<div class="ticker" aria-label="School highlights"><div class="ticker-inner"><span><b>✦</b> Learning and excellence</span><span><b>✦</b> Student leadership</span><span><b>✦</b> Community service</span><span><b>✦</b> Creativity and culture</span><span><b>✦</b> Learning and excellence</span><span><b>✦</b> Student leadership</span><span><b>✦</b> Community service</span><span><b>✦</b> Creativity and culture</span></div></div>
+
+<section class="section alt" id="about">
+ <div class="wrap about-grid">
+  <div class="about-copy reveal">
+   <div class="eyebrow">A warm welcome</div><h2>More than a school.<br>A place to belong.</h2>
+   <p>MGDBHSS, Kundara, brings students, teachers, families and the wider community together in the shared journey of education. This website is a central place for school information, announcements, activities and important updates.</p>
+   <p>Our school profile, history, vision and mission will be added here using the official information supplied by the school.</p>
+   <div class="values">
+    <div class="value"><strong>Learn</strong><span>Knowledge and curiosity</span></div>
+    <div class="value"><strong>Grow</strong><span>Confidence and character</span></div>
+    <div class="value"><strong>Serve</strong><span>Care for our community</span></div>
+   </div>
+  </div>
+  <div class="photo-frame reveal"><div class="placeholder"><span>▧</span>SCHOOL CAMPUS PHOTOGRAPH</div><div class="photo-caption"><small>MGDBHSS · Kundara</small><strong>Our campus, our community</strong></div></div>
+ </div>
+</section>
+
+<section class="section" id="announcements">
+ <div class="wrap">
+  <div class="section-head reveal"><div><div class="eyebrow">Stay informed</div><h2>Latest announcements</h2><p class="lead">Important notices and updates for students, parents, teachers and visitors.</p></div></div>
+  <div class="announcement-layout">
+   <div class="announce-intro reveal"><div class="eyebrow">Notice board</div><h2>What's happening<br>at school?</h2><p>Check this space regularly for official announcements, event updates and important information from the school.</p><div class="mini">Official school updates · MGDBHSS</div></div>
+   <div class="notice-list">
+    <article class="notice reveal"><div class="notice-date"><b>01</b><span>Update</span></div><div><h3>Welcome to the MGDBHSS website</h3><p>Our school website is being prepared. This page will share verified school announcements and updates.</p><span class="tag">Starter notice · Replace before publishing</span></div></article>
+    <article class="notice reveal"><div class="notice-date"><b>02</b><span>Notice</span></div><div><h3>Souhritha Club and NSS activities</h3><p>Information about club activities, awareness programmes and community initiatives will be published here after confirmation.</p><span class="tag">Starter notice · Replace before publishing</span></div></article>
+    <article class="notice reveal"><div class="notice-date"><b>03</b><span>Info</span></div><div><h3>Stay connected with the school</h3><p>Students and parents are encouraged to follow official school communication for confirmed dates and instructions.</p><span class="tag">Starter notice · Replace before publishing</span></div></article>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section alt" id="clubs">
+ <div class="wrap">
+  <div class="section-head reveal"><div><div class="eyebrow">Beyond the classroom</div><h2>Clubs, service & student life</h2><p class="lead">Opportunities to develop responsibility, compassion, teamwork and active citizenship.</p></div></div>
+  <div class="program-grid">
+   <article class="program souhritha reveal">
+    <div class="program-top"><div class="program-icon">♡</div><span class="program-label">Student wellbeing</span></div>
+    <h3>Souhritha Club</h3>
+    <p>The Souhritha Club can be introduced here as a student-support and wellbeing initiative. Add the school's official description, activities, coordinators and photographs to explain its work accurately.</p>
+    <span class="learn">Care · Support · Positive school life</span>
+   </article>
+   <article class="program nss reveal">
+    <div class="program-top"><div class="program-icon">✳</div><span class="program-label">Community service</span></div>
+    <h3>National Service Scheme (NSS)</h3>
+    <p>The NSS section will highlight student volunteering and community-oriented activities. Official details about the unit, programmes, special camps and achievements can be added here.</p>
+    <span class="learn">Not Me, But You · Service · Citizenship</span>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="campus">
+ <div class="wrap">
+  <div class="section-head reveal"><div><div class="eyebrow">Explore our school</div><h2>Life at MGDBHSS</h2><p class="lead">A glimpse of the people, programmes and experiences that make up our school.</p></div></div>
+  <div class="feature-grid">
+   <article class="feature reveal"><div class="symbol">▤</div><h3>Academic life</h3><p>Learning programmes, academic information and student accomplishments.</p></article>
+   <article class="feature reveal"><div class="symbol">✧</div><h3>Arts & culture</h3><p>Creative expression, cultural celebrations and school events.</p></article>
+   <article class="feature reveal"><div class="symbol">⚑</div><h3>Sports & games</h3><p>Sports activities, participation, teamwork and achievements.</p></article>
+   <article class="feature reveal"><div class="symbol">♡</div><h3>Student wellbeing</h3><p>A supportive environment that values respect, kindness and belonging.</p></article>
+   <article class="feature reveal"><div class="symbol">✳</div><h3>Social responsibility</h3><p>Volunteering, awareness activities and community engagement.</p></article>
+   <article class="feature reveal"><div class="symbol">◎</div><h3>School events</h3><p>Celebrations, programmes, important days and school highlights.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section alt">
+ <div class="wrap">
+  <div class="section-head reveal"><div><div class="eyebrow">Moments & memories</div><h2>School gallery</h2><p class="lead">Photographs from the campus, classroom activities, events, Souhritha Club and NSS programmes will appear here.</p></div></div>
+  <div class="gallery-grid">
+   <div class="gallery-item reveal"><div><span>▧</span>MAIN SCHOOL PHOTO</div></div>
+   <div class="gallery-item reveal"><div><span>▧</span>SCHOOL EVENTS</div></div>
+   <div class="gallery-item reveal"><div><span>▧</span>NSS ACTIVITIES</div></div>
+   <div class="gallery-item reveal"><div><span>▧</span>SOUHRITHA CLUB</div></div>
+   <div class="gallery-item reveal"><div><span>▧</span>STUDENT LIFE</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap">
+  <div class="contact-band reveal" id="contact">
+   <div><div class="eyebrow" style="color:var(--gold)">Get in touch</div><h2>Connect with MGDBHSS</h2><p>Official school address, office phone number and email will be published here after confirmation.</p></div>
+   <a class="btn btn-gold" href="mailto:">Contact the school office ↗</a>
+  </div>
+ </div>
+</section>
+</main>
+<footer>
+ <div class="wrap">
+  <div class="footer-grid">
+   <div><div class="footer-brand">MGDBHSS</div><p>Kundara, Kerala<br>Official school website</p><p>Learning · Leadership · Service</p></div>
+   <div><h3>Explore</h3><a href="#about">About the school</a><a href="#announcements">Announcements</a><a href="#clubs">Clubs & service</a><a href="#campus">Campus life</a></div>
+   <div><h3>School information</h3><p>Official address and contact information will be added after verification.</p><a href="#home">Back to top ↑</a></div>
+  </div>
+  <div class="copyright"><span>© <span id="year"></span> MGDBHSS, Kundara. All rights reserved.</span><span>Designed for students, parents and the school community.</span></div>
+ </div>
+</footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('mainNav');
+menuBtn.addEventListener('click',()=>{const opened=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(opened));menuBtn.textContent=opened?'×':'☰';});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+if('IntersectionObserver' in window){
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12});
+ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));}
+</script>
+</body>
+</html>

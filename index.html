@@ -1,65 +1,2538 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#10283f">
-<title>MGDBHSS | Kundara</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1f33">
+<title>MGD HSS for Boys Kundara | Excellence in Education</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#10283f;--blue:#1d5b78;--teal:#70c7c3;--gold:#e8bd70;--bg:#f3f6f8;--ink:#192f40;--muted:#687b89;--line:#e1e9ee;--shadow:0 18px 55px #10283f16}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,"Segoe UI",sans-serif;line-height:1.65}button,a{font:inherit}a{text-decoration:none;color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-.topline{height:4px;background:linear-gradient(90deg,var(--gold),white,var(--teal),var(--gold));background-size:250% 100%;animation:shine 8s linear infinite}
-header{position:sticky;top:0;z-index:30;background:#ffffffed;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.head{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px}.logo{width:50px;height:50px;border-radius:14px;object-fit:contain;border:1px solid var(--line);padding:3px;background:white}.brand b{display:block;color:var(--navy);font-size:18px;letter-spacing:.07em;line-height:1.2}.brand small{font-size:10px;color:var(--muted);letter-spacing:.13em;text-transform:uppercase}
-nav{display:flex;gap:5px;align-items:center}nav button{border:0;background:transparent;padding:10px 12px;border-radius:10px;color:#526675;font-size:12px;font-weight:800;transition:.2s}nav button:hover,nav button.active{background:#eaf2f5;color:var(--navy)}nav button.active{box-shadow:inset 0 -2px var(--gold)}nav .contact{background:var(--navy);color:white;margin-left:5px}.menu{display:none;border:1px solid var(--line);background:white;border-radius:10px;padding:8px 12px;font-size:20px;color:var(--navy)}
-.page{display:none;animation:pageIn .5s ease both}.page.active{display:block}
-.hero{min-height:570px;display:flex;align-items:center;position:relative;overflow:hidden;color:white;background:linear-gradient(110deg,#091d30f5,#123b58e8 58%,#1b6171c9),url("campus.jpg") center/cover}.hero:before{content:"";position:absolute;width:550px;height:550px;right:-120px;top:-220px;border:1px solid #ffffff25;border-radius:50%;box-shadow:0 0 0 55px #ffffff08,0 0 0 110px #ffffff05;animation:spin 45s linear infinite}.hero:after{content:"";position:absolute;width:310px;height:310px;right:18%;bottom:-240px;border:1px solid #ffffff20;border-radius:50%;animation:spin 32s linear infinite reverse}
-.hero-content{position:relative;z-index:1;padding:85px 0;max-width:730px;animation:rise .9s both}.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid #ffffff35;background:#ffffff12;padding:8px 13px;border-radius:30px;color:#f0d495;font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}.dot{width:7px;height:7px;background:#8ce0b7;border-radius:50%;animation:pulse 2s infinite}
-h1{font-size:clamp(42px,6vw,74px);line-height:1.02;letter-spacing:-.055em;margin:22px 0 18px}h1 span{color:var(--gold)}.hero p{max-width:570px;color:#d6e4eb;font-size:15px;line-height:1.9}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{border:0;border-radius:11px;padding:13px 18px;font-size:12px;font-weight:900;cursor:pointer;transition:.25s}.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px #0002}.gold{background:var(--gold);color:var(--navy)}.outline{border:1px solid #ffffff75;background:#ffffff0c;color:white}
-.hero-card{position:absolute;right:max(20px,calc((100vw - 1160px)/2));bottom:48px;z-index:2;padding:17px 19px;width:210px;border:1px solid #ffffff40;background:#ffffff16;backdrop-filter:blur(14px);border-radius:17px}.hero-card small{color:var(--gold);font-size:9px;letter-spacing:.15em;text-transform:uppercase;font-weight:900}.hero-card b{display:block;margin-top:5px;font-size:14px}
-.ticker{overflow:hidden;background:var(--gold);white-space:nowrap;color:var(--navy)}.ticker-track{display:flex;width:max-content;padding:9px 0;animation:marquee 32s linear infinite;font-size:10px;font-weight:950;letter-spacing:.12em;text-transform:uppercase}.ticker-track span{padding:0 30px}
-.section{padding:70px 0}.white{background:white}.eyebrow{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);font-weight:950}h2{font-size:clamp(28px,3.7vw,42px);line-height:1.12;letter-spacing:-.045em;color:var(--navy);margin:8px 0 12px}.lead{font-size:13px;color:var(--muted);max-width:620px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.copy p,.panel p{font-size:13px;color:var(--muted);line-height:1.9}.photo{position:relative;min-height:320px;border-radius:22px;overflow:hidden;background:linear-gradient(140deg,#dce9ee,#a9c8d2);box-shadow:var(--shadow)}.photo img{width:100%;height:100%;min-height:320px;position:absolute;inset:0;object-fit:cover}.caption{position:absolute;bottom:15px;left:15px;right:15px;padding:13px 16px;border-radius:12px;background:#10283fdf;color:white}.caption small{display:block;color:var(--gold);font-size:9px;letter-spacing:.14em;text-transform:uppercase}.caption b{font-size:14px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card,.panel{background:white;border:1px solid var(--line);border-radius:17px;padding:22px;box-shadow:0 8px 28px #10283f08;transition:.3s}.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}.icon{height:42px;width:42px;display:grid;place-items:center;border-radius:13px;background:#edf5f7;color:var(--blue);font-size:20px}.card h3{font-size:14px;color:var(--navy);margin:12px 0 5px}.card p{font-size:11px;color:var(--muted);margin:0}
-.banner{padding:60px 0;background:linear-gradient(110deg,#0b2034,#174b68);color:white;position:relative;overflow:hidden}.banner:after{content:"";position:absolute;width:350px;height:350px;right:-120px;top:-230px;border:1px solid #ffffff25;border-radius:50%;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff05}.banner .eyebrow{color:var(--gold)}.banner h1{font-size:clamp(34px,5vw,52px);margin:10px 0}.banner p{font-size:13px;color:#cbdbe4;max-width:650px;margin:0}
-.content{padding:55px 0 75px;min-height:420px}.notice-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:20px}.notice-intro{background:var(--navy);color:white;border-radius:20px;padding:27px}.notice-intro h2{color:white;font-size:31px}.notice-intro p{font-size:12px;color:#c8d8e2}.notice-list{display:grid;gap:12px}.notice{display:grid;grid-template-columns:56px 1fr;gap:13px;background:white;border:1px solid var(--line);border-radius:15px;padding:16px;transition:.25s}.notice:hover{transform:translateX(4px);box-shadow:var(--shadow)}.date{display:grid;place-content:center;text-align:center;border-radius:10px;background:#edf4f7;color:var(--navy)}.date b{font-size:19px;line-height:1}.date span{font-size:9px;font-weight:900;text-transform:uppercase}.notice h3{font-size:13px;color:var(--navy);margin:0 0 4px}.notice p{font-size:11px;color:var(--muted);margin:0}.demo{display:inline-block;margin-top:7px;padding:3px 7px;border-radius:5px;background:#fff3d7;color:#8d6925;font-size:8px;font-weight:950;letter-spacing:.07em}
-.club-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.club{background:white;border:1px solid var(--line);border-radius:20px;padding:27px;transition:.3s}.club:hover{transform:translateY(-6px);box-shadow:var(--shadow)}.club .icon{width:50px;height:50px;font-size:23px}.club h2{font-size:23px;margin-top:14px}.club p{font-size:12px;color:var(--muted)}.motto{color:var(--blue);font-size:10px;font-weight:950;letter-spacing:.1em;text-transform:uppercase}
-.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:13px}.gallery figure{position:relative;margin:0;min-height:170px;border-radius:15px;overflow:hidden;background:#dce8ed}.gallery figure:first-child{grid-row:span 2}.gallery img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}.gallery figure:hover img{transform:scale(1.06)}.gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:25px 13px 11px;color:white;font-size:11px;font-weight:900;background:linear-gradient(transparent,#10283fcc)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.contact-item{padding:20px;background:white;border:1px solid var(--line);border-radius:15px}.contact-item b{display:block;color:var(--navy);font-size:13px}.contact-item span{font-size:11px;color:var(--muted)}
-footer{background:#081b2b;color:#dce7ed;padding:42px 0 18px}.footgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:25px}footer h3{font-size:13px;color:white}footer p,footer a{font-size:11px;color:#adc0cc}footer a{display:block;margin:7px 0}.copyright{border-top:1px solid #ffffff20;margin-top:25px;padding-top:14px;color:#829bab;font-size:10px;display:flex;justify-content:space-between}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.reveal.show{opacity:1;transform:none}
-@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}@keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{70%{box-shadow:0 0 0 8px #8ce0b700}}@keyframes marquee{to{transform:translateX(-50%)}}@keyframes shine{to{background-position:250% 0}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
-@media(max-width:850px){.hero-card{display:none}.nav button{padding:9px 8px;font-size:10px}}
-@media(max-width:700px){.wrap{width:calc(100% - 30px)}.head{height:70px}.menu{display:block}nav{display:none;position:absolute;top:70px;left:0;right:0;padding:13px 18px 18px;background:white;border-bottom:1px solid var(--line);box-shadow:0 15px 25px #10283f16;flex-direction:column;align-items:stretch}nav.open{display:flex}nav button{text-align:left;padding:11px}.hero{min-height:500px}.hero-content{padding:70px 0}.section{padding:55px 0}.grid2,.notice-layout{grid-template-columns:1fr}.photo{order:-1;min-height:250px}.photo img{min-height:250px}.cards{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.gallery figure:first-child{grid-column:span 2;grid-row:auto;min-height:200px}.club-grid{grid-template-columns:1fr}.footgrid{grid-template-columns:1fr 1fr}}
-@media(max-width:470px){.brand b{font-size:16px}.logo{width:45px;height:45px}.hero h1{font-size:44px}.hero p{font-size:13px}.cards,.contact-grid{grid-template-columns:1fr}.gallery{gap:8px}.footgrid{grid-template-columns:1fr}.copyright{display:block}.copyright span{display:block;margin:4px 0}}
+:root {
+  --navy: #0b1f33;
+  --navy-light: #153352;
+  --blue: #1a5c7a;
+  --teal: #38a3a5;
+  --gold: #e5b869;
+  --gold-light: #f6dca8;
+  --bg: #f4f7f9;
+  --surface: #ffffff;
+  --ink: #132535;
+  --muted: #5a6e7f;
+  --line: #dfe7ed;
+  --shadow-sm: 0 4px 16px rgba(11, 31, 51, 0.05);
+  --shadow-md: 0 14px 36px rgba(11, 31, 51, 0.09);
+  --shadow-lg: 0 24px 60px rgba(11, 31, 51, 0.16);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+button, a, input, select, textarea {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  width: min(1200px, calc(100% - 36px));
+  margin-inline: auto;
+}
+
+/* Top Accent Bar */
+.topline {
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), #fff, var(--teal), var(--gold));
+  background-size: 250% 100%;
+  animation: shine 8s linear infinite;
+}
+
+/* Header & Navigation */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line);
+  transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  box-shadow: 0 8px 30px rgba(11, 31, 51, 0.08);
+}
+
+.head {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.logo-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  border: 1px solid var(--line);
+  padding: 4px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-text {
+  min-width: 0;
+}
+
+.brand b {
+  display: block;
+  color: var(--navy);
+  font-size: clamp(14px, 2vw, 17px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brand small {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+nav button {
+  border: 0;
+  background: transparent;
+  padding: 9px 12px;
+  border-radius: 10px;
+  color: #465a6b;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+nav button:hover,
+nav button.active {
+  background: #eaf1f6;
+  color: var(--navy);
+}
+
+nav button.active {
+  box-shadow: inset 0 -2.5px 0 var(--gold);
+}
+
+nav .contact-btn {
+  background: var(--navy);
+  color: #fff;
+  margin-left: 6px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 12px rgba(11, 31, 51, 0.18);
+}
+
+nav .contact-btn:hover,
+nav .contact-btn.active {
+  background: var(--navy-light);
+  color: var(--gold-light);
+  box-shadow: 0 6px 16px rgba(11, 31, 51, 0.25);
+}
+
+.menu-btn {
+  display: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 11px;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  font-size: 20px;
+  color: var(--navy);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.menu-btn:active {
+  background: #eef3f7;
+}
+
+/* Page Transitions */
+.page {
+  display: none;
+  animation: pageIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 610px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(56, 163, 165, 0.28), transparent 45%),
+    linear-gradient(115deg, rgba(7, 22, 37, 0.96) 0%, rgba(16, 48, 74, 0.9) 55%, rgba(23, 83, 102, 0.85) 100%),
+    url("campus.jpg") center/cover no-repeat;
+}
+
+.hero-ring-1 {
+  position: absolute;
+  width: 580px;
+  height: 580px;
+  right: -140px;
+  top: -210px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.03), 0 0 0 120px rgba(255, 255, 255, 0.02);
+  animation: spin 50s linear infinite;
+  pointer-events: none;
+}
+
+.hero-ring-2 {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  right: 16%;
+  bottom: -230px;
+  border: 1px solid rgba(229, 184, 105, 0.2);
+  border-radius: 50%;
+  animation: spin 36s linear infinite reverse;
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 36px;
+  align-items: center;
+  padding: 76px 0;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid rgba(229, 184, 105, 0.38);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  padding: 7px 14px;
+  border-radius: 99px;
+  color: var(--gold-light);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background: #6ee7b7;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.7);
+  animation: pulse 2s infinite;
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5.5vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  margin: 20px 0 18px;
+  font-weight: 800;
+}
+
+h1 span {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero p {
+  max-width: 580px;
+  color: #d6e4ee;
+  font-size: clamp(14.5px, 1.5vw, 16px);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 12px;
+  padding: 13px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.gold:hover {
+  background: #ecc47c;
+}
+
+.outline {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.outline:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #fff;
+}
+
+.navy-btn {
+  background: var(--navy);
+  color: #fff;
+}
+
+.navy-btn:hover {
+  background: var(--navy-light);
+}
+
+/* Hero Floating Glass Card */
+.hero-side-card {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
+}
+
+.hero-side-card .badge-title {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.hero-side-card h3 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  margin: 8px 0 14px;
+  line-height: 1.3;
+}
+
+.quick-links-mini {
+  display: grid;
+  gap: 9px;
+}
+
+.quick-links-mini button {
+  width: 100%;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 11px;
+  font-size: 12.5px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.quick-links-mini button:hover {
+  background: rgba(229, 184, 105, 0.22);
+  border-color: var(--gold);
+}
+
+/* Marquee Ticker */
+.ticker {
+  overflow: hidden;
+  background: var(--gold);
+  white-space: nowrap;
+  color: var(--navy);
+  border-bottom: 1px solid rgba(11, 31, 51, 0.1);
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  padding: 10px 0;
+  animation: marquee 34s linear infinite;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+.ticker-track span {
+  padding: 0 28px;
+}
+
+/* Highlights Strip */
+.stats-strip {
+  background: var(--navy);
+  color: #fff;
+  padding: 36px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-box {
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-box strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 23px;
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.stat-box span {
+  display: block;
+  font-size: 12px;
+  color: #c5d6e3;
+  margin-top: 4px;
+}
+
+/* Common Sections */
+.section {
+  padding: 76px 0;
+}
+
+.white {
+  background: var(--surface);
+}
+
+.eyebrow {
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-weight: 800;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 3.6vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  margin: 8px 0 14px;
+}
+
+.lead {
+  font-size: 14.5px;
+  color: var(--muted);
+  max-width: 680px;
+  margin: 0;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.copy p,
+.panel p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.photo {
+  position: relative;
+  min-height: 340px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: linear-gradient(145deg, #133854, #22647e);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-fallback {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 24px;
+}
+
+.photo-fallback svg {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 10px;
+  opacity: 0.8;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.caption {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 2;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(11, 31, 51, 0.88);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.caption small {
+  display: block;
+  color: var(--gold);
+  font-size: 9.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.caption b {
+  font-size: 14.5px;
+}
+
+/* Cards & Panels */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.card,
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: #c5d7e3;
+}
+
+.icon {
+  height: 46px;
+  width: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #eaf3f7, #dcebf2);
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card h3 {
+  font-size: 16px;
+  color: var(--navy);
+  margin: 14px 0 6px;
+}
+
+.card p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.65;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.card-link:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+/* Principal / Leadership Message Block */
+.quote-box {
+  background: linear-gradient(135deg, #0b1f33, #153b59);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.quote-box::before {
+  content: "“";
+  position: absolute;
+  top: -15px;
+  right: 24px;
+  font-family: var(--font-serif);
+  font-size: 140px;
+  color: rgba(229, 184, 105, 0.14);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.quote-box blockquote {
+  margin: 14px 0 18px;
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 2.2vw, 23px);
+  line-height: 1.5;
+  color: #f4f8fb;
+}
+
+.quote-author {
+  font-size: 12.5px;
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+/* Inner Page Banners */
+.banner {
+  padding: 64px 0;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(56, 163, 165, 0.25), transparent 45%),
+    linear-gradient(115deg, #091d30, #164866);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -120px;
+  top: -220px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 45px rgba(255, 255, 255, 0.04), 0 0 0 90px rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+}
+
+.banner .eyebrow {
+  color: var(--gold);
+}
+
+.banner h1 {
+  font-size: clamp(32px, 4.8vw, 50px);
+  margin: 10px 0 12px;
+}
+
+.banner p {
+  font-size: 14.5px;
+  color: #cfe0ea;
+  max-width: 680px;
+  margin: 0;
+}
+
+.content {
+  padding: 58px 0 80px;
+  min-height: 440px;
+}
+
+/* Vision & Mission Cards */
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.vm-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  border-top: 4px solid var(--blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.vm-card.gold-top {
+  border-top-color: var(--gold);
+}
+
+/* Academics Stream Cards */
+.stream-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.stream-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stream-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #eaf3f7;
+  color: var(--blue);
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  width: fit-content;
+}
+
+.stream-card h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--navy);
+  margin: 12px 0 8px;
+}
+
+.subject-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  border-top: 1px dashed var(--line);
+  padding-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.subject-list li {
+  font-size: 13px;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subject-list li::before {
+  content: "✓";
+  color: var(--teal);
+  font-weight: 900;
+}
+
+/* Section Division Cards (UP/HS vs HSS) */
+.division-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.division-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+/* Announcements & Filter */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.filter-chip {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--muted);
+  padding: 8px 15px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-chip.active,
+.filter-chip:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+.notice-layout {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.notice-intro {
+  background: var(--navy);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  position: sticky;
+  top: 96px;
+}
+
+.notice-intro h2 {
+  color: #fff;
+  font-size: 28px;
+}
+
+.notice-intro p {
+  font-size: 13px;
+  color: #c8d8e2;
+  line-height: 1.75;
+}
+
+.notice-list {
+  display: grid;
+  gap: 14px;
+}
+
+.notice {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  transition: 0.25s;
+}
+
+.notice:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.date {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border-radius: 12px;
+  background: #edf4f7;
+  color: var(--navy);
+  padding: 8px 4px;
+}
+
+.date b {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.date span {
+  font-size: 9.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 3px;
+  color: var(--blue);
+}
+
+.notice h3 {
+  font-size: 15px;
+  color: var(--navy);
+  margin: 0 0 5px;
+}
+
+.notice p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.demo {
+  display: inline-block;
+  margin-top: 9px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #fff3d7;
+  color: #8d6925;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+/* Clubs & Activities */
+.club-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.club {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: 0.3s;
+  box-shadow: var(--shadow-sm);
+}
+
+.club:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.club .icon {
+  width: 52px;
+  height: 52px;
+  font-size: 24px;
+}
+
+.club h2 {
+  font-size: 23px;
+  margin-top: 16px;
+}
+
+.club p {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.motto {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--blue);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.grace-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 5px 11px;
+  border-radius: 8px;
+  background: #eef8f2;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 190px;
+  gap: 14px;
+}
+
+.gallery figure {
+  position: relative;
+  margin: 0;
+  min-height: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: linear-gradient(135deg, #1b4965, #2c6e8a);
+  box-shadow: var(--shadow-sm);
+  cursor: zoom-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery figure:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery figure:nth-child(4) {
+  grid-column: span 2;
+}
+
+.gallery img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.6s ease, filter 0.4s ease;
+}
+
+.gallery figure:hover img {
+  transform: scale(1.06);
+  filter: saturate(1.1);
+}
+
+.gallery figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 36px 15px 13px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  background: linear-gradient(transparent, rgba(11, 31, 51, 0.92));
+}
+
+/* Contact & Inquiry Form */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.contact-item {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-item b {
+  display: block;
+  color: var(--navy);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.contact-item span {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  display: block;
+}
+
+.form-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-md);
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f9fbfc;
+  color: var(--ink);
+  font-size: 13.5px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(26, 92, 122, 0.12);
+}
+
+.form-status {
+  display: none;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #e6f6ef;
+  color: #135c3d;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+/* FAQ Accordion */
+.faq-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.faq-q {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 16px 18px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.faq-q span {
+  font-size: 18px;
+  color: var(--blue);
+  transition: transform 0.25s;
+}
+
+.faq-item.open .faq-q span {
+  transform: rotate(45deg);
+}
+
+.faq-a {
+  display: none;
+  padding: 0 18px 16px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.faq-item.open .faq-a {
+  display: block;
+}
+
+/* Lightbox Controls */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  background: rgba(6, 21, 34, 0.94);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lb-btn {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 22px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+  z-index: 260;
+}
+
+.lb-btn:hover {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+#lbClose {
+  right: 18px;
+  top: 18px;
+}
+
+#lbPrev {
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#lbNext {
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#lbImage {
+  max-width: 90vw;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+#lbCaption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+/* Back to top button */
+.back-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--navy);
+  color: var(--gold);
+  border: 1px solid rgba(229, 184, 105, 0.35);
+  box-shadow: var(--shadow-md);
+  display: none;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  z-index: 90;
+  transition: 0.25s;
+}
+
+.back-top.visible {
+  display: grid;
+}
+
+.back-top:hover {
+  transform: translateY(-3px);
+  background: var(--navy-light);
+}
+
+/* Footer */
+footer {
+  background: #071828;
+  color: #dce7ed;
+  padding: 52px 0 24px;
+}
+
+.footgrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 28px;
+}
+
+footer h3 {
+  font-size: 14px;
+  color: #fff;
+  margin: 0 0 12px;
+  letter-spacing: 0.02em;
+}
+
+footer p,
+footer a {
+  font-size: 12.5px;
+  color: #a9becb;
+  line-height: 1.7;
+}
+
+footer a {
+  display: block;
+  margin: 8px 0;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--gold);
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 32px;
+  padding-top: 18px;
+  color: #829bab;
+  font-size: 11.5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* Animations */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  70% { box-shadow: 0 0 0 9px rgba(110, 231, 183, 0); }
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+@keyframes shine {
+  to { background-position: 250% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Responsive Breakpoints (Tablet & Mobile Optimization) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    padding: 64px 0;
+  }
+  .hero-side-card {
+    max-width: 480px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footgrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .menu-btn {
+    display: grid;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    padding: 14px 18px 20px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 20px 35px rgba(11, 31, 51, 0.14);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    max-height: calc(100vh - 76px);
+    overflow-y: auto;
+  }
+  nav.open {
+    display: flex;
+  }
+  nav button {
+    text-align: left;
+    padding: 13px 14px;
+    font-size: 14px;
+    border-radius: 11px;
+  }
+  nav .contact-btn {
+    margin-left: 0;
+    margin-top: 4px;
+    text-align: center;
+  }
+  .grid2,
+  .notice-layout,
+  .contact-layout,
+  .vm-grid,
+  .stream-grid,
+  .division-grid {
+    grid-template-columns: 1fr;
+  }
+  .notice-intro {
+    position: static;
+  }
+  .photo {
+    order: -1;
+    min-height: 270px;
+  }
+  .photo img {
+    min-height: 270px;
+  }
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 165px;
+  }
+  .gallery figure:first-child {
+    grid-column: span 2;
+    grid-row: auto;
+    min-height: 220px;
+  }
+  .gallery figure:nth-child(4) {
+    grid-column: span 2;
+  }
+  .club-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .wrap {
+    width: calc(100% - 28px);
+  }
+  .head {
+    height: 68px;
+  }
+  nav {
+    top: 68px;
+  }
+  .logo-box {
+    width: 42px;
+    height: 42px;
+  }
+  .brand b {
+    font-size: 14.5px;
+    white-space: normal;
+  }
+  .brand small {
+    font-size: 9px;
+  }
+  .hero {
+    min-height: auto;
+  }
+  .hero-grid {
+    padding: 48px 0;
+    gap: 26px;
+  }
+  h1 {
+    font-size: 34px;
+  }
+  .actions {
+    flex-direction: column;
+  }
+  .actions .btn {
+    width: 100%;
+  }
+  .stats-grid,
+  .cards,
+  .contact-grid,
+  .footgrid {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: 52px 0;
+  }
+  .banner {
+    padding: 46px 0;
+  }
+  .content {
+    padding: 42px 0 60px;
+  }
+  .quote-box {
+    padding: 24px;
+  }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 135px;
+    gap: 10px;
+  }
+  .gallery figure:first-child {
+    grid-column: span 2;
+    min-height: 185px;
+  }
+  .gallery figure:nth-child(4) {
+    grid-column: span 2;
+  }
+  .notice {
+    grid-template-columns: 54px 1fr;
+    gap: 12px;
+    padding: 14px;
+  }
+  .lb-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+  #lbPrev {
+    left: 8px;
+  }
+  #lbNext {
+    right: 8px;
+  }
+}
 </style>
 </head>
 <body>
 <div class="topline"></div>
-<header><div class="wrap head">
-<a class="brand" href="#home" data-page="home"><img class="logo" src="logo.png" alt="MGDBHSS logo"><span><b>MGDBHSS</b><small>Kundara · Kerala</small></span></a>
-<button class="menu" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
-<nav id="nav"><button class="active" data-page="home">Home</button><button data-page="about">About</button><button data-page="announcements">Announcements</button><button data-page="clubs">Clubs & NSS</button><button data-page="gallery">Gallery</button><button class="contact" data-page="contact">Contact</button></nav>
-</div></header>
+
+<header id="siteHeader">
+  <div class="wrap head">
+    <a class="brand" href="#home" data-page="home">
+      <div class="logo-box">
+        <img class="logo" src="logo.png" alt="MGD HSS for Boys Kundara logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span style="display:none;font-weight:900;color:var(--navy);font-size:13px">MGD</span>
+      </div>
+      <div class="brand-text">
+        <b>MGD HSS for Boys Kundara</b>
+        <small>Kundara · Kollam · Kerala</small>
+      </div>
+    </a>
+
+    <button class="menu-btn" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <nav id="nav" aria-label="Main navigation">
+      <button class="active" data-page="home">Home</button>
+      <button data-page="about">About</button>
+      <button data-page="academics">Academics</button>
+      <button data-page="announcements">Announcements</button>
+      <button data-page="clubs">Clubs & Units</button>
+      <button data-page="gallery">Gallery</button>
+      <button class="contact-btn" data-page="contact">Contact Us</button>
+    </nav>
+  </div>
+</header>
+
 <main>
-<section class="page active" data-view="home">
- <section class="hero"><div class="wrap"><div class="hero-content"><div class="pill"><i class="dot"></i> Welcome to MGDBHSS · Kundara</div><h1>Inspiring minds.<br><span>Shaping futures.</span></h1><p>A place where learning, character and community come together. Explore school information, student activities and the programmes that make our school community special.</p><div class="actions"><button class="btn gold" data-page="announcements">Latest announcements ↗</button><button class="btn outline" data-page="about">Discover our school</button></div></div></div><div class="hero-card"><small>Our school community</small><b>Learn with purpose.<br>Grow through service.</b></div></section>
- <div class="ticker"><div class="ticker-track"><span>✦ Learning and excellence</span><span>✦ Student leadership</span><span>✦ Community service</span><span>✦ Creativity and culture</span><span>✦ Learning and excellence</span><span>✦ Student leadership</span><span>✦ Community service</span><span>✦ Creativity and culture</span></div></div>
- <section class="section white"><div class="wrap grid2"><div class="copy reveal"><div class="eyebrow">A warm welcome</div><h2>More than a school.<br>A place to belong.</h2><p>MGDBHSS, Kundara, brings students, teachers, families and the wider community together in the shared journey of education. This website is a central place for school information, announcements, activities and important updates.</p><button class="btn" style="background:var(--navy);color:white" data-page="about">About our school →</button></div><div class="photo reveal"><img src="campus.jpg" alt="MGDBHSS campus" onerror="this.style.display='none'"><div class="caption"><small>MGDBHSS · Kundara</small><b>Our campus, our community</b></div></div></div></section>
- <section class="section"><div class="wrap"><div class="eyebrow">Explore MGDBHSS</div><h2>One school. Many opportunities.</h2><p class="lead">Find the information you need through the dedicated pages of our school website.</p><div class="cards"><article class="card reveal"><div class="icon">▤</div><h3>School information</h3><p>Learn about our school, its values, history and community.</p></article><article class="card reveal"><div class="icon">✳</div><h3>Clubs & service</h3><p>Discover Souhritha Club, NSS and student participation.</p></article><article class="card reveal"><div class="icon">▧</div><h3>School gallery</h3><p>Explore campus photographs, programmes and memorable events.</p></article></div></div></section>
-</section>
-<section class="page" data-view="about"><div class="banner"><div class="wrap"><div class="eyebrow">Get to know us</div><h1>About our school</h1><p>Discover the school community, its vision and the values that guide learning at MGDBHSS, Kundara.</p></div></div><div class="content"><div class="wrap grid2"><div class="photo"><img src="campus.jpg" alt="School campus" onerror="this.style.display='none'"><div class="caption"><small>Our campus</small><b>MGDBHSS, Kundara</b></div></div><article class="panel"><h2>Welcome to MGDBHSS</h2><p>MGDBHSS is a school community in Kundara, Kerala. This profile can introduce the school's history, vision, mission, educational approach and achievements.</p><p><b>To be completed:</b> Please provide the approved school history, official vision and mission, year of establishment and other verified details. Only confirmed information should be published.</p></article></div></div></section>
-<section class="page" data-view="announcements"><div class="banner"><div class="wrap"><div class="eyebrow">School notice board</div><h1>Announcements</h1><p>Important information and updates for students, parents, teachers and visitors.</p></div></div><div class="content"><div class="wrap notice-layout"><div class="notice-intro"><div class="eyebrow" style="color:var(--gold)">Stay informed</div><h2>What's happening at school?</h2><p>Check this page regularly for official notices, event updates and important information from the school office.</p></div><div class="notice-list"><article class="notice"><div class="date"><b>01</b><span>Update</span></div><div><h3>Welcome to the MGDBHSS website</h3><p>Our school website is being prepared. This section will carry verified school announcements.</p><span class="demo">DEMO NOTICE — REPLACE BEFORE PUBLISHING</span></div></article><article class="notice"><div class="date"><b>02</b><span>Clubs</span></div><div><h3>Souhritha Club and NSS activities</h3><p>Information about club activities, awareness programmes and community initiatives will be shared after confirmation.</p><span class="demo">DEMO NOTICE — REPLACE BEFORE PUBLISHING</span></div></article><article class="notice"><div class="date"><b>03</b><span>Info</span></div><div><h3>Stay connected with the school</h3><p>Please follow official school communication for confirmed dates, instructions and updates.</p><span class="demo">DEMO NOTICE — REPLACE BEFORE PUBLISHING</span></div></article></div></div></div></section>
-<section class="page" data-view="clubs"><div class="banner"><div class="wrap"><div class="eyebrow">Beyond the classroom</div><h1>Clubs & community service</h1><p>Student opportunities to develop empathy, responsibility, teamwork and active citizenship.</p></div></div><div class="content"><div class="wrap"><div class="club-grid"><article class="club"><div class="icon">♡</div><h2>Souhritha Club</h2><p>The Souhritha Club section can showcase the school's student wellbeing and support initiatives. Add the school's approved description, activities, coordinators and photographs to explain its work accurately.</p><span class="motto">Care · Support · Positive school life</span></article><article class="club"><div class="icon">✳</div><h2>National Service Scheme (NSS)</h2><p>The NSS section will highlight volunteering and community-oriented activities. Official details about the unit, programmes, special camps and achievements can be added here.</p><span class="motto">Not Me, But You · Service · Citizenship</span></article></div><div style="margin-top:38px"><div class="eyebrow">Student development</div><h2>Learning through participation</h2><div class="cards"><article class="card"><div class="icon">✧</div><h3>Arts & culture</h3><p>Creative expression and cultural celebrations.</p></article><article class="card"><div class="icon">⚑</div><h3>Sports & games</h3><p>Teamwork, participation and sporting achievements.</p></article><article class="card"><div class="icon">◎</div><h3>School events</h3><p>Programmes, celebrations and important days.</p></article></div></div></div></div></section>
-<section class="page" data-view="gallery"><div class="banner"><div class="wrap"><div class="eyebrow">Moments & memories</div><h1>School gallery</h1><p>Photographs from campus life, school programmes, Souhritha Club, NSS and student activities.</p></div></div><div class="content"><div class="wrap"><div class="gallery"><figure><img src="campus.jpg" alt="Campus" onerror="this.style.display='none'"><figcaption>Our school campus</figcaption></figure><figure><img src="school-event-1.jpg" alt="School event" onerror="this.style.display='none'"><figcaption>School events</figcaption></figure><figure><img src="nss-activity-1.jpg" alt="NSS activity" onerror="this.style.display='none'"><figcaption>NSS activities</figcaption></figure><figure><img src="souhritha-club-1.jpg" alt="Souhritha Club" onerror="this.style.display='none'"><figcaption>Souhritha Club</figcaption></figure><figure><img src="students-1.jpg" alt="Students" onerror="this.style.display='none'"><figcaption>Student life</figcaption></figure></div><p style="font-size:11px;color:var(--muted)">Gallery photographs are placeholders until approved school images are added.</p></div></div></section>
-<section class="page" data-view="contact"><div class="banner"><div class="wrap"><div class="eyebrow">We're here to help</div><h1>Contact MGDBHSS</h1><p>Official school contact details will be published here after confirmation.</p></div></div><div class="content"><div class="wrap contact-grid"><div class="contact-item"><b>School address</b><span>MGDBHSS, Kundara, Kerala<br>Full postal address to be added.</span></div><div class="contact-item"><b>Office telephone</b><span>Official school phone number to be added.</span></div><div class="contact-item"><b>Email address</b><span>Official school email to be added.</span></div><div class="contact-item"><b>Office hours</b><span>Confirmed office hours to be added.</span></div></div></div></section>
+  <!-- HOME PAGE -->
+  <section class="page active" data-view="home">
+    <section class="hero">
+      <div class="hero-ring-1"></div>
+      <div class="hero-ring-2"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-content">
+          <div class="pill"><i class="dot"></i> Welcome to MGD HSS for Boys Kundara · Kundara</div>
+          <h1>Inspiring minds.<br><span>Shaping futures.</span></h1>
+          <p>A premier learning community in Kundara comprising two distinct academic divisions—Upper Primary & High School (Classes 5–10) and Higher Secondary (+1 & +2)—nurturing academic excellence, leadership and service.</p>
+          <div class="actions">
+            <button class="btn gold" data-page="announcements">Latest Announcements ↗</button>
+            <button class="btn outline" data-page="academics">Explore Academics</button>
+          </div>
+        </div>
+
+        <aside class="hero-side-card">
+          <div class="badge-title">Quick Access Portal</div>
+          <h3>Learn with purpose. Grow through service.</h3>
+          <div class="quick-links-mini">
+            <button data-page="about"><span>Two Campus Sections (UP/HS & HSS)</span><span>→</span></button>
+            <button data-page="academics"><span>+1/+2 Streams: Bio Science & Commerce</span><span>→</span></button>
+            <button data-page="clubs"><span>HS Clubs (Classes 8–10) & HSS Units</span><span>→</span></button>
+            <button data-page="contact"><span>Office & Admissions Info</span><span>→</span></button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>✦ UP & High School Section (Classes 5–10) · Higher Secondary Section (+1 & +2)</span>
+        <span>✦ Higher Secondary Streams: Bio Science & Commerce with Computer Application</span>
+        <span>✦ High School Clubs (Classes 8–10 with SSLC Grace Marks): NCC, SPC, JRC & Little KITEs</span>
+        <span>✦ Higher Secondary Units (+1 & +2): NSS & Souhritha Club</span>
+        <span>✦ UP & High School Section (Classes 5–10) · Higher Secondary Section (+1 & +2)</span>
+        <span>✦ Higher Secondary Streams: Bio Science & Commerce with Computer Application</span>
+        <span>✦ High School Clubs (Classes 8–10 with SSLC Grace Marks): NCC, SPC, JRC & Little KITEs</span>
+        <span>✦ Higher Secondary Units (+1 & +2): NSS & Souhritha Club</span>
+      </div>
+    </div>
+
+    <div class="stats-strip">
+      <div class="wrap stats-grid">
+        <div class="stat-box reveal">
+          <strong>Classes 5 – 12</strong>
+          <span>Two dedicated sections: UP & High School (5–10) and HSS (+1 & +2)</span>
+        </div>
+        <div class="stat-box reveal">
+          <strong>+1 & +2 Streams</strong>
+          <span>Bio Science & Commerce with Computer Application</span>
+        </div>
+        <div class="stat-box reveal">
+          <strong>HS Grace Mark Clubs</strong>
+          <span>NCC, SPC, JRC & Little KITEs from Class 8 to Class 10</span>
+        </div>
+        <div class="stat-box reveal">
+          <strong>HSS Service Units</strong>
+          <span>National Service Scheme (NSS) & Souhritha Club for +1 & +2</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section white">
+      <div class="wrap grid2">
+        <div class="copy reveal">
+          <div class="eyebrow">A Warm Welcome</div>
+          <h2>More than a school.<br>A place to belong.</h2>
+          <p>MGD HSS for Boys Kundara brings students, educators, families and the wider community together in the shared journey of meaningful education. Our campus operates through two well-structured divisions: the <strong>UP & High School Section (Classes 5 to 10)</strong> and the <strong>Higher Secondary Section (Plus One & Plus Two)</strong>.</p>
+          <p>From foundational learning in Upper Primary to specialized co-curricular clubs in High School (Classes 8–10) and specialized Higher Secondary streams, every stage is guided with care and discipline.</p>
+          <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+            <button class="btn navy-btn" data-page="about">Explore School Structure →</button>
+            <button class="btn" style="background:#eaf2f6;color:var(--navy)" data-page="gallery">View Campus Gallery</button>
+          </div>
+        </div>
+        <div class="photo reveal">
+          <div class="photo-fallback">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+            <div style="font-weight:700;font-size:15px">MGD HSS for Boys Kundara</div>
+            <div style="font-size:12px;opacity:0.75">Campus Photograph Placeholder</div>
+          </div>
+          <img src="campus.jpg" alt="MGD HSS for Boys Kundara campus" onerror="this.style.display='none'">
+          <div class="caption">
+            <small>MGD HSS for Boys Kundara · Kerala</small>
+            <b>Two Sections · One Unified Learning Community</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">Explore Our Institution</div>
+        <h2>One school. Many opportunities.</h2>
+        <p class="lead">Navigate directly to dedicated sections for academic divisions, Higher Secondary streams, High School & HSS clubs, and school updates.</p>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="icon">🏛</div>
+            <h3>Two Campus Divisions</h3>
+            <p>Learn how our UP & High School Section (Classes 5–10) and Higher Secondary Section (+1 & +2) function together.</p>
+            <span class="card-link" data-page="about">Explore About Us →</span>
+          </article>
+          <article class="card reveal">
+            <div class="icon">📚</div>
+            <h3>Academic Programmes</h3>
+            <p>UP (5–7), High School (8–10), and Higher Secondary (+1/+2) in Bio Science & Commerce with Computer Application.</p>
+            <span class="card-link" data-page="academics">View Academics →</span>
+          </article>
+          <article class="card reveal">
+            <div class="icon">🤝</div>
+            <h3>Clubs & Grace Mark Units</h3>
+            <p>High School clubs from Class 8 to 10 (NCC, SPC, JRC, Little KITEs) and Higher Secondary units (NSS, Souhritha Club).</p>
+            <span class="card-link" data-page="clubs">Discover Clubs →</span>
+          </article>
+          <article class="card reveal">
+            <div class="icon">📢</div>
+            <h3>Official Notice Board</h3>
+            <p>Stay informed with timely circulars, examination updates, event schedules and school announcements.</p>
+            <span class="card-link" data-page="announcements">Check Notices →</span>
+          </article>
+          <article class="card reveal">
+            <div class="icon">🖼</div>
+            <h3>Campus Moments Gallery</h3>
+            <p>Browse curated photographs from celebrations, camps, parades, sports meets and school programmes.</p>
+            <span class="card-link" data-page="gallery">Open Gallery →</span>
+          </article>
+          <article class="card reveal">
+            <div class="icon">📍</div>
+            <h3>School Office & Contact</h3>
+            <p>Find campus location details, office hours and send an inquiry directly to the school administration.</p>
+            <span class="card-link" data-page="contact">Get in Touch →</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" style="padding-top:20px">
+      <div class="wrap">
+        <div class="quote-box reveal">
+          <div class="eyebrow" style="color:var(--gold)">Institutional Philosophy</div>
+          <blockquote>“True education shapes both intellect and character—equipping young minds not only to succeed in examinations, but to serve society with integrity and compassion.”</blockquote>
+          <div class="quote-author">— MGD HSS for Boys Kundara Community</div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ABOUT PAGE -->
+  <section class="page" data-view="about">
+    <div class="banner">
+      <div class="wrap">
+        <div class="eyebrow">Get to Know Us</div>
+        <h1>About Our School</h1>
+        <p>Discover our two-division campus structure, vision, academic pathways and student development culture at MGD HSS for Boys Kundara.</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="wrap">
+        <div class="grid2">
+          <div class="photo">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+              <div style="font-weight:700;font-size:15px">School Campus</div>
+            </div>
+            <img src="campus.jpg" alt="School campus" onerror="this.style.display='none'">
+            <div class="caption">
+              <small>Our Campus</small>
+              <b>MGD HSS for Boys Kundara, Kundara</b>
+            </div>
+          </div>
+          <article class="panel">
+            <div class="eyebrow">Institutional Overview</div>
+            <h2>Welcome to MGD HSS for Boys Kundara</h2>
+            <p>MGD HSS for Boys Kundara is a respected boys' educational institution situated in Kundara, Kollam district, Kerala. The school is organized into two dedicated administrative and academic divisions:</p>
+            <p><strong>1. Upper Primary & High School Section (Classes 5 to 10):</strong> Providing strong foundational education in UP (Classes 5–7) and comprehensive secondary education in High School (Classes 8–10), where students also participate in grace-mark eligible clubs and uniformed units.</p>
+            <p><strong>2. Higher Secondary Section (Plus One & Plus Two):</strong> Offering focused Plus One and Plus Two education in <em>Bio Science</em> and <em>Commerce with Computer Application</em>, alongside NSS and Souhritha Club initiatives.</p>
+          </article>
+        </div>
+
+        <!-- TWO DIVISIONS BREAKDOWN -->
+        <div style="margin-top:46px">
+          <div class="eyebrow">Campus Organization</div>
+          <h2>Our Two School Sections</h2>
+          <div class="division-grid">
+            <div class="division-card" style="border-top:4px solid var(--teal)">
+              <span class="stream-tag" style="background:#e6f6f5;color:#114b4d">Section 01 · Classes 5 – 10</span>
+              <h3 style="font-family:var(--font-serif);font-size:22px;color:var(--navy);margin:12px 0 8px">UP & High School Section</h3>
+              <p style="font-size:13.5px;color:var(--muted);margin:0 0 12px">Covers Upper Primary (Classes 5–7) and High School (Classes 8–10) under the Kerala SCERT curriculum.</p>
+              <ul class="subject-list">
+                <li><strong>UP Wing (Classes 5–7):</strong> Focused on core classroom academics, reading, foundational science, mathematics and arts without external camps or special club enrolments.</li>
+                <li><strong>High School Wing (Classes 8–10):</strong> Dedicated club and uniformed unit activities (NCC, SPC, JRC, Little KITEs) begin in Class 8 and conclude in Class 10, offering eligible SSLC grace marks.</li>
+              </ul>
+            </div>
+
+            <div class="division-card" style="border-top:4px solid var(--blue)">
+              <span class="stream-tag">Section 02 · Classes 11 & 12</span>
+              <h3 style="font-family:var(--font-serif);font-size:22px;color:var(--navy);margin:12px 0 8px">Higher Secondary Section (HSS)</h3>
+              <p style="font-size:13.5px;color:var(--muted);margin:0 0 12px">Operates as a separate Higher Secondary wing for Plus One (+1) and Plus Two (+2) students under DHSE Kerala.</p>
+              <ul class="subject-list">
+                <li><strong>Two Specialized Streams:</strong> Bio Science and Commerce with Computer Application.</li>
+                <li><strong>Dedicated HSS Units:</strong> National Service Scheme (NSS) and Souhritha Club tailored exclusively for Plus One and Plus Two learners.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="vm-grid">
+          <div class="vm-card">
+            <div class="eyebrow">Our Vision</div>
+            <h3 style="font-family:var(--font-serif);font-size:22px;color:var(--navy);margin:8px 0">Empowering Purposeful Learners</h3>
+            <p style="font-size:13.5px;color:var(--muted);margin:0">To foster an inspiring educational environment that cultivates intellectual curiosity, ethical leadership, social responsibility and lifelong learning among every student.</p>
+          </div>
+          <div class="vm-card gold-top">
+            <div class="eyebrow">Our Mission</div>
+            <h3 style="font-family:var(--font-serif);font-size:22px;color:var(--navy);margin:8px 0">Excellence With Empathy</h3>
+            <p style="font-size:13.5px;color:var(--muted);margin:0">To deliver inclusive, high-quality classroom instruction complemented by active clubs, NSS service, arts and sports so every student grows holistically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMICS PAGE -->
+  <section class="page" data-view="academics">
+    <div class="banner">
+      <div class="wrap">
+        <div class="eyebrow">Curriculum & Learning</div>
+        <h1>Academics & Streams</h1>
+        <p>Structured academic programmes across our UP & High School Section (Classes 5–10) and Higher Secondary Section (+1 & +2).</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="wrap">
+        <div class="eyebrow">Higher Secondary Section (+1 & +2)</div>
+        <h2>Higher Secondary Streams</h2>
+        <p class="lead">Our Higher Secondary wing offers two focused career-oriented streams following the Kerala DHSE curriculum, supported by dedicated laboratories and experienced faculty.</p>
+
+        <div class="stream-grid">
+          <article class="stream-card" style="border-top:4px solid var(--blue)">
+            <div>
+              <span class="stream-tag">Higher Secondary (+1 & +2)</span>
+              <h3>Bio Science Stream</h3>
+              <p style="font-size:13.5px;color:var(--muted)">Ideal for students aiming for careers in medicine, allied health sciences, biotechnology, engineering, agriculture and pure sciences.</p>
+              <ul class="subject-list">
+                <li>Physics, Chemistry, Biology & Mathematics</li>
+                <li>Hands-on practical sessions in dedicated Science Labs</li>
+                <li>Strong conceptual foundation for NEET, KEAM & CUET</li>
+                <li>Individual academic mentoring and continuous evaluation</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="stream-card" style="border-top:4px solid var(--gold)">
+            <div>
+              <span class="stream-tag" style="background:#fff6e0;color:#8c6218">Higher Secondary (+1 & +2)</span>
+              <h3>Commerce with Computer Application</h3>
+              <p style="font-size:13.5px;color:var(--muted)">Combines core business, finance and economic principles with modern computing skills for commerce and IT-enabled management careers.</p>
+              <ul class="subject-list">
+                <li>Accountancy, Business Studies & Economics</li>
+                <li>Computer Application with practical IT Lab training</li>
+                <li>Strong preparation for B.Com, BBA, CA, CMA & CS</li>
+                <li>Practical understanding of digital accounting & business tools</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top:48px">
+          <div class="eyebrow">UP & High School Section (Classes 5 – 10)</div>
+          <h2>School Education Stages</h2>
+          <div class="division-grid">
+            <article class="panel" style="border-left:4px solid var(--teal)">
+              <span class="stream-tag" style="background:#e6f6f5;color:#114b4d">Classes 5, 6 & 7</span>
+              <h3 style="font-family:var(--font-serif);font-size:21px;color:var(--navy);margin:10px 0 8px">Upper Primary (UP) Wing</h3>
+              <p style="margin:0">Builds strong fundamentals in languages, mathematics, basic science and social studies in a supportive classroom environment. UP students focus purely on classroom learning and school-level arts/sports without external camps or special club enrolments.</p>
+            </article>
+
+            <article class="panel" style="border-left:4px solid var(--navy)">
+              <span class="stream-tag">Classes 8, 9 & 10</span>
+              <h3 style="font-family:var(--font-serif);font-size:21px;color:var(--navy);margin:10px 0 8px">High School (HS) Wing</h3>
+              <p style="margin:0">Prepares students thoroughly for the SSLC board examinations while opening doors to structured co-curricular clubs (NCC, SPC, JRC, Little KITEs) from Class 8 to Class 10 with eligible SSLC grace marks.</p>
+            </article>
+          </div>
+        </div>
+
+        <div style="margin-top:46px">
+          <div class="eyebrow">Campus Facilities</div>
+          <h2>Learning Infrastructure</h2>
+          <div class="cards">
+            <div class="card">
+              <div class="icon">🔬</div>
+              <h3>Science Laboratories</h3>
+              <p>Well-equipped Physics, Chemistry and Biology laboratories supporting Higher Secondary Bio Science and High School practicals.</p>
+            </div>
+            <div class="card">
+              <div class="icon">💻</div>
+              <h3>IT & Computer Labs</h3>
+              <p>Dedicated computer facilities for Commerce with Computer Application students and Little KITEs High School IT training.</p>
+            </div>
+            <div class="card">
+              <div class="icon">📖</div>
+              <h3>School Library</h3>
+              <p>Reference books, periodicals, literature and study resources encouraging regular reading habits across Classes 5 to 12.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANNOUNCEMENTS PAGE -->
+  <section class="page" data-view="announcements">
+    <div class="banner">
+      <div class="wrap">
+        <div class="eyebrow">School Notice Board</div>
+        <h1>Announcements & Circulars</h1>
+        <p>Important information, schedules and official updates for students, parents, teachers and visitors.</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="wrap notice-layout">
+        <div class="notice-intro">
+          <div class="eyebrow" style="color:var(--gold)">Stay Informed</div>
+          <h2>What's happening at school?</h2>
+          <p>Check this notice board regularly for verified school circulars, examination timetables, PTA meetings and club event updates.</p>
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.14);font-size:12px;color:#dbe8f0">
+            Tip: Use the category filters to quickly view Office, Academic or Club announcements.
+          </div>
+        </div>
+
+        <div>
+          <div class="filter-bar" id="noticeFilters">
+            <button class="filter-chip active" data-filter="all">All Notices</button>
+            <button class="filter-chip" data-filter="office">Office & General</button>
+            <button class="filter-chip" data-filter="academics">Academics</button>
+            <button class="filter-chip" data-filter="clubs">Clubs & Units</button>
+          </div>
+
+          <div class="notice-list" id="noticeList">
+            <article class="notice" data-cat="office">
+              <div class="date"><b>01</b><span>Office</span></div>
+              <div>
+                <h3>Welcome to the MGD HSS for Boys Kundara Digital Portal</h3>
+                <p>Our upgraded school website is now live. Verified school circulars for both UP & High School (Classes 5–10) and Higher Secondary (+1 & +2) sections will be published here.</p>
+                <span class="demo">DEMO NOTICE — REPLACE WITH OFFICIAL CIRCULAR</span>
+              </div>
+            </article>
+
+            <article class="notice" data-cat="academics">
+              <div class="date"><b>02</b><span>Academic</span></div>
+              <div>
+                <h3>Higher Secondary (+1 & +2) Bio Science & Commerce Schedules</h3>
+                <p>Students in Bio Science and Commerce with Computer Application streams are advised to follow lab schedules and continuous evaluation guidelines issued by their departments.</p>
+                <span class="demo">DEMO NOTICE — REPLACE WITH OFFICIAL CIRCULAR</span>
+              </div>
+            </article>
+
+            <article class="notice" data-cat="clubs">
+              <div class="date"><b>03</b><span>HS Wing</span></div>
+              <div>
+                <h3>High School Clubs (Classes 8–10): NCC, SPC, JRC & Little KITEs</h3>
+                <p>Enrolment and parade/training schedules for Class 8 to 10 students opting for SSLC grace-mark eligible clubs will be notified through class teachers.</p>
+                <span class="demo">DEMO NOTICE — REPLACE WITH OFFICIAL CIRCULAR</span>
+              </div>
+            </article>
+
+            <article class="notice" data-cat="clubs">
+              <div class="date"><b>04</b><span>HSS Wing</span></div>
+              <div>
+                <h3>Higher Secondary NSS & Souhritha Club Activities</h3>
+                <p>Plus One and Plus Two volunteers can follow updates regarding NSS special camps, community drives and Souhritha Club wellbeing sessions here.</p>
+                <span class="demo">DEMO NOTICE — REPLACE WITH OFFICIAL CIRCULAR</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLUBS & UNITS PAGE -->
+  <section class="page" data-view="clubs">
+    <div class="banner">
+      <div class="wrap">
+        <div class="eyebrow">Beyond the Classroom</div>
+        <h1>Clubs & Uniformed Units</h1>
+        <p>Co-curricular wings specially structured for High School (Classes 8–10 with SSLC grace marks) and Higher Secondary (+1 & +2).</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="wrap">
+        <!-- Info Note regarding UP vs HS vs HSS -->
+        <div style="background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:14px;padding:16px 20px;margin-bottom:24px;box-shadow:var(--shadow-sm);font-size:13px;color:var(--ink)">
+          <strong>How Clubs Are Structured at Our School:</strong>
+          Upper Primary students (Classes 5–7) do not have special external clubs or camps. Club activities begin specially in <strong>High School (Class 8)</strong> and conclude in <strong>Class 10</strong> (with eligible SSLC grace marks), while <strong>Higher Secondary (+1 & +2)</strong> has its own dedicated NSS and Souhritha Club units.
+        </div>
+
+        <!-- Interactive Wing Filter -->
+        <div class="filter-bar" id="clubWingFilters" style="margin-bottom:28px">
+          <button class="filter-chip active" data-wing="all">All Clubs & Units (6)</button>
+          <button class="filter-chip" data-wing="hs">High School Clubs (Classes 8–10 · Grace Marks)</button>
+          <button class="filter-chip" data-wing="hss">Higher Secondary Units (+1 & +2)</button>
+        </div>
+
+        <!-- HIGH SCHOOL WING SECTION (FEATURED FIRST AS SPECIALITY) -->
+        <div class="wing-block" data-wing-group="hs" style="margin-bottom:48px">
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--line)">
+            <div>
+              <div class="eyebrow" style="color:var(--teal)">High School Wing · Special Co-Curricular Programme</div>
+              <h2 style="margin:4px 0 0;font-size:clamp(22px,3vw,30px)">High School Clubs (Classes 8 to 10)</h2>
+            </div>
+            <span style="padding:6px 14px;border-radius:99px;background:#e6f6f5;color:#114b4d;font-size:11.5px;font-weight:800;letter-spacing:0.04em">Starts Class 8 · Completes Class 10</span>
+          </div>
+
+          <div class="club-grid">
+            <article class="club" style="border-top:4px solid #1b4965">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+                <div class="icon">🎖</div>
+                <span class="stream-tag">High School (Classes 8–10)</span>
+              </div>
+              <h2>National Cadet Corps (NCC)</h2>
+              <p>The NCC troop develops character, comradeship, discipline, leadership, secular outlook and the spirit of adventure among High School cadets through regular parade training, camps and national service activities from Class 8 to Class 10.</p>
+              <span class="motto">Unity and Discipline · Leadership · Courage</span><br>
+              <span class="grace-badge">★ Eligible for SSLC Grace Marks (Classes 8–10)</span>
+            </article>
+
+            <article class="club" style="border-top:4px solid #2b6cb0">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+                <div class="icon">🛡</div>
+                <span class="stream-tag">High School (Classes 8–10)</span>
+              </div>
+              <h2>Student Police Cadet (SPC)</h2>
+              <p>The SPC project trains High School students (Classes 8–10) to respect the law, practice civic sense, empathy and social responsibility. Cadets engage in physical fitness drills, traffic awareness, anti-drug campaigns and community outreach.</p>
+              <span class="motto">We Learn to Serve · Civic Sense · Discipline</span><br>
+              <span class="grace-badge">★ Eligible for SSLC Grace Marks (Classes 8–10)</span>
+            </article>
+
+            <article class="club" style="border-top:4px solid #c53030">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+                <div class="icon">✚</div>
+                <span class="stream-tag" style="background:#fde8e8;color:#9b1c1c">High School (Classes 8–10)</span>
+              </div>
+              <h2>Junior Red Cross (JRC)</h2>
+              <p>Junior Red Cross inspires High School students in health, hygiene, first-aid training, humanitarian service and friendship. Members actively assist in campus health programmes, cleanliness drives and relief initiatives through Class 10.</p>
+              <span class="motto">Health · Service · Friendship</span><br>
+              <span class="grace-badge">★ Eligible for SSLC Grace Marks (Classes 8–10)</span>
+            </article>
+
+            <article class="club" style="border-top:4px solid #2f855a">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+                <div class="icon">💻</div>
+                <span class="stream-tag" style="background:#e6f6ec;color:#1e633b">High School (Classes 8–10)</span>
+              </div>
+              <h2>Little KITEs (IT Club)</h2>
+              <p>Little KITEs empowers High School students in digital technology, coding, animation, robotics, electronics, cyber safety and media production—nurturing young tech creators and digital mentors from Class 8 to Class 10.</p>
+              <span class="motto">Digital Literacy · Innovation · Creativity</span><br>
+              <span class="grace-badge">★ Eligible for SSLC Grace Marks (Classes 8–10)</span>
+            </article>
+          </div>
+        </div>
+
+        <!-- HIGHER SECONDARY WING SECTION -->
+        <div class="wing-block" data-wing-group="hss" style="margin-bottom:46px">
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--line)">
+            <div>
+              <div class="eyebrow" style="color:var(--blue)">Higher Secondary Wing (+1 & +2)</div>
+              <h2 style="margin:4px 0 0;font-size:clamp(22px,3vw,30px)">Higher Secondary Clubs & Units</h2>
+            </div>
+            <span style="padding:6px 14px;border-radius:99px;background:#eaf3f7;color:var(--navy);font-size:11.5px;font-weight:800;letter-spacing:0.04em">Plus One & Plus Two</span>
+          </div>
+
+          <div class="club-grid">
+            <article class="club" style="border-top:4px solid var(--blue)">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+                <div class="icon">✳</div>
+                <span class="stream-tag">Higher Secondary (+1 & +2)</span>
+              </div>
+              <h2>National Service Scheme (NSS)</h2>
+              <p>The NSS unit instills the spirit of selfless community service and social responsibility among Plus One and Plus Two students. Volunteers actively lead campus beautification, environmental conservation, health & blood donation awareness, literacy drives and annual special camps.</p>
+              <span class="motto">Not Me, But You · Service · Citizenship</span>
+            </article>
+
+            <article class="club" style="border-top:4px solid var(--gold)">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+                <div class="icon">♡</div>
+                <span class="stream-tag" style="background:#fff6e0;color:#8c6218">Higher Secondary (+1 & +2)</span>
+              </div>
+              <h2>Souhritha Club</h2>
+              <p>Souhritha Club serves as a dedicated peer-support, adolescent guidance and student wellbeing platform for Higher Secondary learners. Through awareness workshops, mentorship, counselling support and friendly campus initiatives, it nurtures emotional resilience and positive campus life.</p>
+              <span class="motto">Care · Support · Positive School Life</span>
+            </article>
+          </div>
+        </div>
+
+        <div style="margin-top:44px">
+          <div class="eyebrow">General School Activities</div>
+          <h2>Arts, Sports & Campus Life</h2>
+          <div class="cards">
+            <article class="card">
+              <div class="icon">✧</div>
+              <h3>School Kalolsavam & Arts</h3>
+              <p>Encouraging literary talent, music, drama, speech and visual arts across school and sub-district youth festivals.</p>
+            </article>
+            <article class="card">
+              <div class="icon">⚑</div>
+              <h3>Sports & Athletics</h3>
+              <p>Promoting physical fitness, sportsmanship and teamwork across athletics, football, cricket and indoor games.</p>
+            </article>
+            <article class="card">
+              <div class="icon">🌿</div>
+              <h3>Observance of Important Days</h3>
+              <p>Campus assemblies, quizzes, exhibitions and environmental awareness activities celebrated by students.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY PAGE -->
+  <section class="page" data-view="gallery">
+    <div class="banner">
+      <div class="wrap">
+        <div class="eyebrow">Moments & Memories</div>
+        <h1>School Gallery</h1>
+        <p>Photographs from campus life, school programmes, High School clubs (NCC, SPC, JRC, Little KITEs) and Higher Secondary (NSS, Souhritha Club).</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="wrap">
+        <div class="eyebrow">A Glimpse of School Life</div>
+        <h2>Our moments, our memories.</h2>
+        <p class="lead" style="margin-bottom:24px">Explore campus life, celebrations and student activities. Tap any photograph to view it in full-screen lightbox mode.</p>
+
+        <div class="gallery">
+          <figure>
+            <div class="photo-fallback"><div style="font-weight:700">Our School Campus</div><small style="opacity:0.75">campus.jpg</small></div>
+            <img src="campus.jpg" alt="School campus" onerror="this.style.display='none'">
+            <figcaption>Our School Campus — MGD HSS for Boys Kundara</figcaption>
+          </figure>
+          <figure>
+            <div class="photo-fallback"><div style="font-weight:700">School Events</div><small style="opacity:0.75">school-event-1.jpg</small></div>
+            <img src="school-event-1.jpg" alt="School event" onerror="this.style.display='none'">
+            <figcaption>Annual School Programmes & Celebrations</figcaption>
+          </figure>
+          <figure>
+            <div class="photo-fallback"><div style="font-weight:700">NSS Activities</div><small style="opacity:0.75">nss-activity-1.jpg</small></div>
+            <img src="nss-activity-1.jpg" alt="NSS activity" onerror="this.style.display='none'">
+            <figcaption>Higher Secondary NSS Volunteers</figcaption>
+          </figure>
+          <figure>
+            <div class="photo-fallback"><div style="font-weight:700">High School Clubs</div><small style="opacity:0.75">souhritha-club-1.jpg</small></div>
+            <img src="souhritha-club-1.jpg" alt="Clubs & Units" onerror="this.style.display='none'">
+            <figcaption>NCC, SPC, JRC, Little KITEs & Souhritha Club Activities</figcaption>
+          </figure>
+          <figure>
+            <div class="photo-fallback"><div style="font-weight:700">Student Life</div><small style="opacity:0.75">students-1.jpg</small></div>
+            <img src="students-1.jpg" alt="Students" onerror="this.style.display='none'">
+            <figcaption>Campus Learning & Student Life</figcaption>
+          </figure>
+        </div>
+
+        <p style="font-size:12px;color:var(--muted);margin-top:18px">Note: Place verified school photographs (<code>campus.jpg</code>, <code>school-event-1.jpg</code>, etc.) in the same folder to display them automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT PAGE -->
+  <section class="page" data-view="contact">
+    <div class="banner">
+      <div class="wrap">
+        <div class="eyebrow">We're Here to Help</div>
+        <h1>Contact MGD HSS for Boys Kundara</h1>
+        <p>Reach out to the school office for admissions inquiries (Classes 5–10 & +1/+2), certificates, academic information and official communication.</p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="wrap contact-layout">
+        <div>
+          <div class="eyebrow">School Office Details</div>
+          <h2 style="font-size:28px">Get in Touch</h2>
+          <p style="font-size:13.5px;color:var(--muted);margin-bottom:20px">Official school contact numbers and email addresses can be updated directly below once confirmed by the school office.</p>
+
+          <div class="contact-grid">
+            <div class="contact-item">
+              <b>📍 Campus Address</b>
+              <span>MGD HSS for Boys Kundara,<br>Kundara, Kollam District,<br>Kerala — India</span>
+            </div>
+            <div class="contact-item">
+              <b>🕒 Office Hours</b>
+              <span>Monday – Friday<br>9:30 AM – 4:30 PM<br>(Closed on Public Holidays)</span>
+            </div>
+            <div class="contact-item">
+              <b>📞 Office Telephone</b>
+              <span>Official school landline / office phone number to be added.</span>
+            </div>
+            <div class="contact-item">
+              <b>✉️ Official Email</b>
+              <span>Official school email address to be added.</span>
+            </div>
+          </div>
+
+          <div style="margin-top:28px">
+            <div class="eyebrow">Quick Help</div>
+            <h3 style="font-family:var(--font-serif);font-size:21px;color:var(--navy);margin:6px 0 12px">Frequently Asked Questions</h3>
+            <div class="faq-list">
+              <div class="faq-item">
+                <button class="faq-q" type="button">Which classes and streams are offered at the school?<span>+</span></button>
+                <div class="faq-a">The school has two sections: UP & High School (Classes 5 to 10) and Higher Secondary (+1 & +2). In Higher Secondary, we offer two streams: <strong>Bio Science</strong> and <strong>Commerce with Computer Application</strong>.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-q" type="button">From which class do clubs start, and do they offer grace marks?<span>+</span></button>
+                <div class="faq-a">Upper Primary students (Classes 5–7) do not have special clubs or camps. Co-curricular clubs (NCC, SPC, JRC and Little KITEs) begin specially in <strong>Class 8</strong> and conclude in <strong>Class 10</strong>, making students eligible for SSLC grace marks. Higher Secondary (+1 & +2) has NSS and Souhritha Club.</div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-q" type="button">How do I apply for Higher Secondary (+1) admission?<span>+</span></button>
+                <div class="faq-a">Higher Secondary admissions follow the Kerala DHSE Single Window Admission Portal (HSCAP) guidelines for Bio Science and Commerce with Computer Application. Visit the school office with required documents during allotment dates for verification.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <div class="eyebrow">Send a Message</div>
+          <h3 style="font-family:var(--font-serif);font-size:24px;color:var(--navy);margin:6px 0 8px">School Inquiry Form</h3>
+          <p style="font-size:13px;color:var(--muted);margin:0 0 18px">Have a question for the UP/High School or Higher Secondary office? Fill out this quick message draft.</p>
+
+          <form id="inquiryForm">
+            <div class="form-group">
+              <label for="inqName">Full Name *</label>
+              <input type="text" id="inqName" required placeholder="Enter student or parent name">
+            </div>
+            <div class="form-group">
+              <label for="inqPhone">Phone Number (10 digits) *</label>
+              <input type="tel" id="inqPhone" pattern="[0-9]{10}" maxlength="10" required placeholder="e.g., 9876543210">
+            </div>
+            <div class="form-group">
+              <label for="inqTopic">Section / Subject</label>
+              <select id="inqTopic">
+                <option value="UP & High School Admission (Classes 5–10)">UP & High School Admission (Classes 5–10)</option>
+                <option value="Higher Secondary (+1/+2) Bio Science / Commerce">Higher Secondary (+1/+2) Bio Science / Commerce</option>
+                <option value="High School Clubs (NCC, SPC, JRC, Little KITEs)">High School Clubs (NCC, SPC, JRC, Little KITEs)</option>
+                <option value="Higher Secondary Units (NSS, Souhritha Club)">Higher Secondary Units (NSS, Souhritha Club)</option>
+                <option value="Office / Certificate Request">Office / Certificate Request</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inqMsg">Message *</label>
+              <textarea id="inqMsg" rows="4" required placeholder="Write your message or query here..."></textarea>
+            </div>
+            <button type="submit" class="btn navy-btn" style="width:100%">Submit Inquiry →</button>
+            <div class="form-status" id="formStatus">Thank you! Your inquiry message has been recorded locally. Please contact the school office directly for urgent matters.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap"><div class="footgrid"><div><h3 style="font-size:18px">MGDBHSS</h3><p>Kundara, Kerala<br>Learning · Leadership · Service</p></div><div><h3>Explore</h3><a href="#home" data-page="home">Home</a><a href="#about" data-page="about">About</a><a href="#announcements" data-page="announcements">Announcements</a></div><div><h3>Student community</h3><a href="#clubs" data-page="clubs">Clubs & NSS</a><a href="#gallery" data-page="gallery">Gallery</a><a href="#contact" data-page="contact">Contact</a></div></div><div class="copyright"><span>© <span id="year"></span> MGDBHSS, Kundara. All rights reserved.</span><span>Official school website</span></div></div></footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-btn" id="lbClose" aria-label="Close">×</button>
+  <button class="lb-btn" id="lbPrev" aria-label="Previous">‹</button>
+  <img id="lbImage" alt="">
+  <button class="lb-btn" id="lbNext" aria-label="Next">›</button>
+  <div id="lbCaption"></div>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+<footer>
+  <div class="wrap">
+    <div class="footgrid">
+      <div>
+        <h3 style="font-family:var(--font-serif);font-size:19px">MGD HSS for Boys Kundara</h3>
+        <p>Kundara, Kollam District, Kerala<br>UP & High School Section (Classes 5–10) · Higher Secondary Section (+1 & +2)</p>
+      </div>
+      <div>
+        <h3>Quick Navigation</h3>
+        <a href="#home" data-page="home">Home</a>
+        <a href="#about" data-page="about">About & Two Sections</a>
+        <a href="#academics" data-page="academics">Academics & Streams</a>
+        <a href="#announcements" data-page="announcements">Announcements</a>
+      </div>
+      <div>
+        <h3>Campus Life</h3>
+        <a href="#clubs" data-page="clubs">Clubs (HS 8–10 & HSS +1/+2)</a>
+        <a href="#gallery" data-page="gallery">Photo Gallery</a>
+        <a href="#contact" data-page="contact">Contact & Office</a>
+      </div>
+      <div>
+        <h3>Academic Wings</h3>
+        <p>UP & High School (Classes 5–10) & Higher Secondary (+1 & +2: Bio Science, Commerce with Computer Application).</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© <span id="year"></span> MGD HSS for Boys Kundara, Kundara. All rights reserved.</span>
+      <span>Official School Web Portal</span>
+    </div>
+  </div>
+</footer>
+
 <script>
-const pages=[...document.querySelectorAll('.page')],nav=document.getElementById('nav'),menu=document.getElementById('menu');
-function showPage(name,changeHash=true){let page=document.querySelector('[data-view="'+name+'"]');if(!page)return;pages.forEach(p=>p.classList.toggle('active',p===page));document.querySelectorAll('nav [data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===name));nav.classList.remove('open');menu.textContent='☰';menu.setAttribute('aria-expanded','false');if(changeHash)history.pushState(null,'','#'+name);window.scrollTo({top:0,behavior:'smooth'});reveal();}
-document.querySelectorAll('[data-page]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();showPage(el.dataset.page)}));
-menu.addEventListener('click',()=>{let open=nav.classList.toggle('open');menu.textContent=open?'×':'☰';menu.setAttribute('aria-expanded',String(open))});
-function route(){let name=location.hash.slice(1)||'home';showPage(name,false)}window.addEventListener('popstate',route);window.addEventListener('hashchange',route);document.getElementById('year').textContent=new Date().getFullYear();
-let io;function reveal(){if(io)io.disconnect();if(!('IntersectionObserver'in window)){document.querySelectorAll('.page.active .reveal').forEach(x=>x.classList.add('show'));return}io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.page.active .reveal').forEach(x=>{x.classList.remove('show');io.observe(x)})}reveal();if(location.hash)route();
+const pages = [...document.querySelectorAll('.page')];
+const nav = document.getElementById('nav');
+const menu = document.getElementById('menu');
+const header = document.getElementById('siteHeader');
+const backTop = document.getElementById('backTop');
+
+function showPage(name, changeHash = true) {
+  const page = document.querySelector('[data-view="' + name + '"]');
+  if (!page) return;
+  pages.forEach(p => p.classList.toggle('active', p === page));
+  document.querySelectorAll('nav [data-page]').forEach(b => b.classList.toggle('active', b.dataset.page === name));
+  closeMobileMenu();
+  if (changeHash) history.pushState(null, '', '#' + name);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  reveal();
+}
+
+function closeMobileMenu() {
+  nav.classList.remove('open');
+  menu.textContent = '☰';
+  menu.setAttribute('aria-expanded', 'false');
+}
+
+document.querySelectorAll('[data-page]').forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    showPage(el.dataset.page);
+  });
+});
+
+menu.addEventListener('click', e => {
+  e.stopPropagation();
+  const open = nav.classList.toggle('open');
+  menu.textContent = open ? '×' : '☰';
+  menu.setAttribute('aria-expanded', String(open));
+});
+
+document.addEventListener('click', e => {
+  if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== menu) {
+    closeMobileMenu();
+  }
+});
+
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 12);
+  backTop.classList.toggle('visible', window.scrollY > 360);
+}, { passive: true });
+
+backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+function route() {
+  const name = location.hash.slice(1) || 'home';
+  showPage(name, false);
+}
+window.addEventListener('popstate', route);
+window.addEventListener('hashchange', route);
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Club Wing Filter (All / High School / Higher Secondary)
+const clubWingChips = document.querySelectorAll('#clubWingFilters .filter-chip');
+const wingBlocks = document.querySelectorAll('.wing-block');
+clubWingChips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    clubWingChips.forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    const wing = chip.dataset.wing;
+    wingBlocks.forEach(block => {
+      block.style.display = (wing === 'all' || block.dataset.wingGroup === wing) ? 'block' : 'none';
+    });
+  });
+});
+
+// Notice Board Category Filter
+const filterChips = document.querySelectorAll('#noticeFilters .filter-chip');
+const notices = document.querySelectorAll('#noticeList .notice');
+filterChips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    filterChips.forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    const filter = chip.dataset.filter;
+    notices.forEach(n => {
+      n.style.display = (filter === 'all' || n.dataset.cat === filter) ? 'grid' : 'none';
+    });
+  });
+});
+
+// FAQ Accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.parentElement.classList.toggle('open');
+  });
+});
+
+// Contact Form Handler
+const inquiryForm = document.getElementById('inquiryForm');
+const formStatus = document.getElementById('formStatus');
+if (inquiryForm) {
+  inquiryForm.addEventListener('submit', e => {
+    e.preventDefault();
+    formStatus.style.display = 'block';
+    inquiryForm.reset();
+    setTimeout(() => { formStatus.style.display = 'none'; }, 6000);
+  });
+}
+
+// Gallery Lightbox with Touch Swipe Support
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImage');
+const lbCap = document.getElementById('lbCaption');
+let lbItems = [];
+let lbIndex = 0;
+let touchStartX = 0;
+
+function openPhoto(i) {
+  lbItems = [...document.querySelectorAll('.page.active .gallery figure')];
+  if (!lbItems.length) return;
+  lbIndex = (i + lbItems.length) % lbItems.length;
+  const f = lbItems[lbIndex];
+  const im = f.querySelector('img');
+  if (!im || im.style.display === 'none') return;
+  lbImg.src = im.src;
+  lbImg.alt = im.alt;
+  lbCap.textContent = f.querySelector('figcaption')?.textContent || im.alt;
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closePhoto() {
+  lb.style.display = 'none';
+  lbImg.src = '';
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.gallery figure').forEach((f, i) => {
+  f.addEventListener('click', () => openPhoto(i));
+});
+
+document.getElementById('lbClose').addEventListener('click', closePhoto);
+document.getElementById('lbPrev').addEventListener('click', () => openPhoto(lbIndex - 1));
+document.getElementById('lbNext').addEventListener('click', () => openPhoto(lbIndex + 1));
+lb.addEventListener('click', e => { if (e.target === lb) closePhoto(); });
+
+lb.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+lb.addEventListener('touchend', e => {
+  const diff = e.changedTouches[0].screenX - touchStartX;
+  if (Math.abs(diff) > 45) openPhoto(diff > 0 ? lbIndex - 1 : lbIndex + 1);
+}, { passive: true });
+
+document.addEventListener('keydown', e => {
+  if (lb.style.display !== 'flex') return;
+  if (e.key === 'Escape') closePhoto();
+  if (e.key === 'ArrowLeft') openPhoto(lbIndex - 1);
+  if (e.key === 'ArrowRight') openPhoto(lbIndex + 1);
+});
+
+// Scroll Reveal
+let io;
+function reveal() {
+  if (io) io.disconnect();
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.page.active .reveal').forEach(x => x.classList.add('show'));
+    return;
+  }
+  io = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('show');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.page.active .reveal').forEach(x => {
+    x.classList.remove('show');
+    io.observe(x);
+  });
+}
+
+reveal();
+if (location.hash) route();
 </script>
-</body></html>
+</body>
+</html>

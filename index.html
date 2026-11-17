@@ -501,6 +501,69 @@ h1 span {
   margin-top: 4px;
 }
 
+/* Leadership Section Styles (Full-Length Portrait Rectangles) */
+.leadership-section {
+  padding: 60px 0;
+  background: #ffffff;
+}
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 30px;
+}
+.leader-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.leader-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+.leader-img-wrapper {
+  width: 100%;
+  height: 480px; /* Tall portrait container to fit full height from head to toe */
+  overflow: hidden;
+  background: #eee;
+}
+.leader-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center; /* Keeps head and upper body perfectly framed */
+}
+.leader-info {
+  padding: 22px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: #fff;
+}
+.leader-info h3 {
+  font-size: 15px;
+  color: var(--navy);
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+.leader-role {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+
 /* Common Sections */
 .section {
   padding: 76px 0;
@@ -755,6 +818,75 @@ h2 {
 .content {
   padding: 58px 0 80px;
   min-height: 440px;
+}
+
+/* School History & Heritage */
+.history-section {
+  margin-top: 46px;
+}
+.history-heading {
+  max-width: 780px;
+  margin-bottom: 22px;
+}
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+.history-card {
+  min-width: 0;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--blue);
+}
+.history-card:nth-child(2) {
+  border-top-color: var(--gold);
+}
+.history-card:nth-child(3) {
+  border-top-color: var(--teal);
+}
+.history-year {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  background: #eaf3f7;
+  color: var(--blue);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.history-card h3 {
+  margin: 2px 0 9px;
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 19px;
+  line-height: 1.3;
+}
+.history-card p,
+.history-philosophy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.history-philosophy {
+  margin-top: 20px;
+  padding: 26px 28px;
+  border: 1px solid #d8e7ed;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #f0f7fa, #fff);
+}
+.history-philosophy h3 {
+  margin: 7px 0 8px;
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 21px;
 }
 
 /* Vision & Mission Cards */
@@ -1071,6 +1203,15 @@ h2 {
 
 .gallery figure:nth-child(4) {
   grid-column: span 2;
+}
+
+/* Sasthrolsavam thumbnail: same single-tile size as the other gallery photos. */
+.gallery figure.gallery-16x9 {
+  grid-column: span 1;
+  grid-row: span 1;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  height: 100%;
 }
 
 .gallery img {
@@ -1495,6 +1636,9 @@ footer a:hover {
     margin-top: 4px;
     text-align: center;
   }
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
   .grid2,
   .notice-layout,
   .contact-layout,
@@ -1528,8 +1672,19 @@ footer a:hover {
   .gallery figure:nth-child(4) {
     grid-column: span 2;
   }
+  .gallery figure.gallery-16x9 {
+    grid-column: span 1;
+    grid-row: auto;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+  }
   .club-grid {
     grid-template-columns: 1fr;
+  }
+  .leaders-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 30px auto 0;
   }
 }
 
@@ -1599,6 +1754,12 @@ footer a:hover {
   }
   .gallery figure:nth-child(4) {
     grid-column: span 2;
+  }
+  .gallery figure.gallery-16x9 {
+    grid-column: span 1;
+    grid-row: auto;
+    height: 100%;
+    aspect-ratio: 16 / 9;
   }
   .notice {
     grid-template-columns: 54px 1fr;
@@ -1712,6 +1873,50 @@ footer a:hover {
         </div>
       </div>
     </div>
+
+    <!-- LEADERSHIP SECTION (FULL PORTRAIT RECTANGLES) -->
+    <section class="leadership-section">
+      <div class="wrap">
+        <div class="eyebrow" style="text-align: center;">Our Guidance</div>
+        <h2 style="text-align: center; margin-bottom: 10px;">School Leadership & Management</h2>
+        <p class="lead" style="text-align: center; margin: 0 auto 30px auto;">Honoring the visionary leadership, patronage, and management guiding our institution.</p>
+        
+        <div class="leaders-grid">
+          <!-- 1. Founder -->
+          <div class="leader-card reveal">
+            <div class="leader-img-wrapper">
+              <img src="founder.jpg" alt="L. L. Baselios Geearghese II" onerror="this.src='342551.jpg'">
+            </div>
+            <div class="leader-info">
+              <h3>L. L. BASELIOS GEEARGHESE II</h3>
+              <p class="leader-role">Founder</p>
+            </div>
+          </div>
+
+          <!-- 2. Patron -->
+          <div class="leader-card reveal">
+            <div class="leader-img-wrapper">
+              <img src="patron.jpg" alt="H.H. Moran Mar Baselios Marthoma Mathews III" onerror="this.src='342552.jpg'">
+            </div>
+            <div class="leader-info">
+              <h3>H.H. MORAN MAR BASELIOS MARTHOMA MATHEWS III</h3>
+              <p class="leader-role">Patron</p>
+            </div>
+          </div>
+
+          <!-- 3. Manager -->
+          <div class="leader-card reveal">
+            <div class="leader-img-wrapper">
+              <img src="manager.jpg" alt="H.G. Zachariah Mar Severios Metropolitan" onerror="this.src='342553.jpg'">
+            </div>
+            <div class="leader-info">
+              <h3>H.G. ZACHARIAH MAR SEVERIOS METROPOLITAN</h3>
+              <p class="leader-role">Manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section white">
       <div class="wrap grid2">
@@ -1828,6 +2033,41 @@ footer a:hover {
             <p><strong>2. Higher Secondary Section (Plus One & Plus Two):</strong> Offering focused Plus One and Plus Two education in <em>Bio Science</em> and <em>Commerce with Computer Application</em>, alongside NSS and Souhritha Club initiatives.</p>
           </article>
         </div>
+
+        <!-- SCHOOL HISTORY & HERITAGE -->
+        <section class="history-section" aria-labelledby="school-history-title">
+          <div class="history-heading">
+            <div class="eyebrow">Our Legacy Since 1916</div>
+            <h2 id="school-history-title">A Century of Educational Heritage</h2>
+            <p class="lead">MGD HSS for Boys, Kundara has a proud educational tradition spanning more than a century. Its journey reflects a lasting belief in education as a powerful foundation for progress.</p>
+          </div>
+
+          <div class="history-grid">
+            <article class="history-card">
+              <span class="history-year">1916 · Founding</span>
+              <h3>Founded in a Vision of Progress</h3>
+              <p>Founded in 1916 by H.H. Baselious Geevarghese II Catholicos in sacred memory of his Guru, Vattasseril Mar Dionysius Metropolitan, who envisioned education as the ultimate tool for progress.</p>
+            </article>
+
+            <article class="history-card">
+              <span class="history-year">2014 · A Major Milestone</span>
+              <h3>Upgraded to Higher Secondary</h3>
+              <p>The school was officially upgraded to a Higher Secondary School in 2014. The Plus Two courses were formally inaugurated on 9 October 2014 by Sri Ramesh Chennithala.</p>
+            </article>
+
+            <article class="history-card">
+              <span class="history-year">Today · Management</span>
+              <h3>A Continuing Educational Mission</h3>
+              <p>The school functions under the benevolent management of the Catholicate and M.D. Schools Corporate Management. The current manager is H.G. Zachariah Mar Severios Metropolitan.</p>
+            </article>
+          </div>
+
+          <div class="history-philosophy">
+            <div class="eyebrow">Our Educational Philosophy</div>
+            <h3>Building Character and Developing the Whole Person</h3>
+            <p>Our educational philosophy centres on noble character formation and holistic personality development. We aim to equip students with the knowledge, confidence and values needed to face the challenges of the digital era.</p>
+          </div>
+        </section>
 
         <!-- TWO DIVISIONS BREAKDOWN -->
         <div style="margin-top:46px">
@@ -2209,6 +2449,11 @@ footer a:hover {
             <div class="photo-fallback"><div style="font-weight:700">Student Life</div><small style="opacity:0.75">students-1.jpg</small></div>
             <img src="students-1.jpg" alt="Students" onerror="this.style.display='none'">
             <figcaption>Campus Learning & Student Life</figcaption>
+          </figure>
+          <figure class="gallery-16x9">
+            <div class="photo-fallback"><div style="font-weight:700">Sub District Sasthrolsavam Inauguration</div><small style="opacity:0.75">sub-district-sasthrolsavam-inauguration.jpg · 16:9</small></div>
+            <img src="sub-district-sasthrolsavam-inauguration.jpg" alt="Sub District Sasthrolsavam Inauguration" onerror="this.style.display='none'">
+            <figcaption>Sub District Sasthrolsavam Inauguration</figcaption>
           </figure>
         </div>
 

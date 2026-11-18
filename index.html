@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0b1f33">
 <title>MGD HSS for Boys Kundara | Excellence in Education</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
@@ -135,10 +137,12 @@ header.scrolled {
 
 .brand b {
   display: block;
-  color: var(--navy);
-  font-size: clamp(14px, 2vw, 17px);
+  color: #123b63;
+  font-family: var(--font-serif);
+  font-size: clamp(15px, 2vw, 19px);
   font-weight: 800;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.005em;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8);
   line-height: 1.2;
   white-space: nowrap;
   overflow: hidden;
@@ -151,8 +155,10 @@ header.scrolled {
   color: var(--muted);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-weight: 700;
-  margin-top: 2px;
+  font-weight: 800;
+  color: #b17b25;
+  letter-spacing: 0.16em;
+  margin-top: 3px;
 }
 
 nav {
@@ -1176,14 +1182,16 @@ h2 {
 
 /* Responsive mixed photo & video gallery */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: start;
-  gap: 14px;
+  display: block;
+  column-count: 4;
+  column-gap: 14px;
 }
 .gallery figure {
   position: relative;
-  margin: 0;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 14px;
+  break-inside: avoid;
   min-width: 0;
   aspect-ratio: 4 / 3;
   border-radius: var(--radius-md);
@@ -1259,16 +1267,13 @@ h2 {
   letter-spacing: .06em;
 }
 @media (max-width: 900px) {
-  .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .gallery { column-count: 3; column-gap: 12px; }
 }
 
 /* Sasthrolsavam thumbnail: same single-tile size as the other gallery photos. */
 .gallery figure.gallery-16x9 {
-  grid-column: span 1;
-  grid-row: span 1;
   aspect-ratio: 16 / 9;
   min-height: 0;
-  height: 100%;
 }
 
 .gallery img {
@@ -1718,13 +1723,10 @@ footer a:hover {
     grid-template-columns: 1fr 1fr;
   }
   .gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    column-count: 2;
+    column-gap: 10px;
   }
   .gallery figure.gallery-16x9 {
-    grid-column: span 1;
-    grid-row: auto;
-    height: 100%;
     aspect-ratio: 16 / 9;
   }
   .club-grid {
@@ -1793,8 +1795,8 @@ footer a:hover {
     padding: 24px;
   }
   .gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 9px;
+    column-count: 2;
+    column-gap: 9px;
   }
   .gallery figcaption { font-size: 10px; padding: 26px 8px 8px; }
   .notice {
@@ -1924,7 +1926,7 @@ footer a:hover {
               <img src="founder.jpg" alt="L. L. Baselios Geearghese II" onerror="this.src='342551.jpg'">
             </div>
             <div class="leader-info">
-              <h3>L. L. BASELIOS GEEARGHESE II</h3>
+              <h3>L. L. BASELIOS GEEVARGHESE II</h3>
               <p class="leader-role">Founder</p>
             </div>
           </div>
@@ -2100,7 +2102,7 @@ footer a:hover {
 
           <div class="history-philosophy">
             <div class="eyebrow">Our Educational Philosophy</div>
-            <h3>Building Character and Developing the Whole Person</h3>
+            <h3>Shaping Character, Nurturing Potential</h3>
             <p>Our educational philosophy centres on noble character formation and holistic personality development. We aim to equip students with the knowledge, confidence and values needed to face the challenges of the digital era.</p>
           </div>
         </section>
@@ -2126,7 +2128,7 @@ footer a:hover {
               <p style="font-size:13.5px;color:var(--muted);margin:0 0 12px">Operates as a separate Higher Secondary wing for Plus One (+1) and Plus Two (+2) students under DHSE Kerala.</p>
               <ul class="subject-list">
                 <li><strong>Two Specialized Streams:</strong> Bio Science and Commerce with Computer Application.</li>
-                <li><strong>Dedicated HSS Units:</strong> National Service Scheme (NSS) and Souhritha Club tailored exclusively for Plus One and Plus Two learners.</li>
+                <li><strong>Dedicated HSS Units:</strong> National Service Scheme (NSS), Souhritha Club and Career Guidance and Counselling Cell, supporting Plus One and Plus Two learners.</li>
               </ul>
             </div>
           </div>
@@ -2427,7 +2429,7 @@ footer a:hover {
             <article class="card">
               <div class="icon">✧</div>
               <h3>School Kalolsavam & Arts</h3>
-              <p>Encouraging literary talent, music, drama, speech and visual arts across school and sub-district youth festivals.</p>
+              <p>Encouraging literary talent, music, drama, speech and visual arts through Sub-District, District and State Youth Festival participation.</p>
             </article>
             <article class="card">
               <div class="icon">⚑</div>
@@ -2480,10 +2482,10 @@ footer a:hover {
           <figure class="ratio-9x16" data-kind="img" data-src="mh.jpg">
             <div class="media-fallback">
               
-              <strong>Mental Health & Hygiene Orientation by James Daniel Sir</strong><small>mh.jpg</small>
+              <strong>Mental Health & Hygiene Orientation by Sri James Daniel Sir</strong><small>mh.jpg</small>
             </div>
-            <img src="mh.jpg" alt="Mental Health and Hygiene orientation by James Daniel Sir" loading="lazy" onerror="this.style.display='none'">
-            <figcaption>Mental Health & Hygiene Orientation by James Daniel Sir</figcaption>
+            <img src="mh.jpg" alt="Mental Health and Hygiene orientation by Sri James Daniel Sir" loading="lazy" onerror="this.style.display='none'">
+            <figcaption>Mental Health & Hygiene Orientation by Sri James Daniel Sir</figcaption>
           </figure>
           <figure class="ratio-16x9" data-kind="img" data-src="tw.jpg">
             <div class="media-fallback">
@@ -2520,18 +2522,18 @@ footer a:hover {
           <figure class="ratio-9x16 is-video" data-kind="video" data-src="st.mp4">
             <div class="media-fallback">
               <span class="play-mark">▶</span>
-              <strong>School Sports Team</strong><small>st.mp4</small>
+              <strong>School Football Team</strong><small>st.mp4</small>
             </div>
             <video class="gallery-thumb" src="st.mp4" muted playsinline preload="metadata" onerror="this.style.display='none'"></video>
-            <figcaption>School Sports Team</figcaption>
+            <figcaption>School Football Team</figcaption>
           </figure>
           <figure class="ratio-9x16 is-video" data-kind="video" data-src="p1.mp4">
             <div class="media-fallback">
               <span class="play-mark">▶</span>
-              <strong>Fresh Plus One Praveshanolsavam</strong><small>p1.mp4</small>
+              <strong>Plus One Praveshanolsavam</strong><small>p1.mp4</small>
             </div>
             <video class="gallery-thumb" src="p1.mp4" muted playsinline preload="metadata" onerror="this.style.display='none'"></video>
-            <figcaption>Fresh Plus One Praveshanolsavam</figcaption>
+            <figcaption>Plus One Praveshanolsavam</figcaption>
           </figure>
           <figure class="ratio-9x16" data-kind="img" data-src="sp.jpg">
             <div class="media-fallback">
@@ -2546,6 +2548,36 @@ footer a:hover {
             </div>
             <img src="si.jpg" alt="Sub District Sasthrolsavam inauguration" loading="lazy" onerror="this.style.display='none'">
             <figcaption>Sub District Sasthrolsavam Inauguration</figcaption>
+          </figure>
+          <figure class="ratio-9x16 is-video" data-kind="video" data-src="wc2026.mp4">
+            <div class="media-fallback"><span class="play-mark">▶</span><strong>World Cup Prediction Contest 2026</strong><small>wc2026.mp4</small></div>
+            <video class="gallery-thumb" src="wc2026.mp4" muted playsinline preload="metadata" onerror="this.style.display='none'"></video>
+            <figcaption>World Cup Prediction Contest 2026</figcaption>
+          </figure>
+          <figure class="ratio-16x9 is-video" data-kind="video" data-src="envday.mp4">
+            <div class="media-fallback"><span class="play-mark">▶</span><strong>Environment Day Celebration with District Collector Smt Annie Jual Thomas</strong><small>envday.mp4</small></div>
+            <video class="gallery-thumb" src="envday.mp4" muted playsinline preload="metadata" onerror="this.style.display='none'"></video>
+            <figcaption>Environment Day Celebration with District Collector Smt Annie Jual Thomas</figcaption>
+          </figure>
+          <figure class="ratio-4x3" data-kind="img" data-src="career.jpg">
+            <div class="media-fallback"><strong>Career Planning and Orientation by Sri Deepu Kumar</strong><small>career.jpg</small></div>
+            <img src="career.jpg" alt="Career Planning and Orientation by Sri Deepu Kumar" loading="lazy" onerror="this.style.display='none'">
+            <figcaption>Career Planning and Orientation by Sri Deepu Kumar</figcaption>
+          </figure>
+          <figure style="aspect-ratio:1 / 1" data-kind="img" data-src="reading.jpg">
+            <div class="media-fallback"><strong>MGD School's Reading Club (Vayanakalari)</strong><small>reading.jpg</small></div>
+            <img src="reading.jpg" alt="MGD School's Reading Club (Vayanakalari)" loading="lazy" onerror="this.style.display='none'">
+            <figcaption>MGD School's Reading Club (Vayanakalari)</figcaption>
+          </figure>
+          <figure class="ratio-9x16" data-kind="img" data-src="ventures1.jpg">
+            <div class="media-fallback"><strong>Our Co-curricular Ventures</strong><small>ventures1.jpg</small></div>
+            <img src="ventures1.jpg" alt="Our Co-curricular Ventures" loading="lazy" onerror="this.style.display='none'">
+            <figcaption>Our Co-curricular Ventures</figcaption>
+          </figure>
+          <figure class="ratio-9x16" data-kind="img" data-src="ventures2.jpg">
+            <div class="media-fallback"><strong>Our Co-curricular Ventures</strong><small>ventures2.jpg</small></div>
+            <img src="ventures2.jpg" alt="Our Co-curricular Ventures" loading="lazy" onerror="this.style.display='none'">
+            <figcaption>Our Co-curricular Ventures</figcaption>
           </figure>
         </div>
 
@@ -2602,8 +2634,12 @@ footer a:hover {
                 <div class="faq-a">Upper Primary students (Classes 5–7) do not have special clubs or camps. Co-curricular clubs (NCC, SPC, JRC and Little KITEs) begin specially in <strong>Class 8</strong> and conclude in <strong>Class 10</strong>, making students eligible for SSLC grace marks. Higher Secondary (+1 & +2) has NSS and Souhritha Club.</div>
               </div>
               <div class="faq-item">
+                <button class="faq-q" type="button">Does the Higher Secondary section have a Career Guidance and Counselling Cell?<span>+</span></button>
+                <div class="faq-a">Yes. The Career Guidance and Counselling Cell is included among the dedicated Higher Secondary units and supports students with career awareness, guidance and counselling.</div>
+              </div>
+              <div class="faq-item">
                 <button class="faq-q" type="button">How do I apply for Higher Secondary (+1) admission?<span>+</span></button>
-                <div class="faq-a">Higher Secondary admissions follow the Kerala DHSE Single Window Admission Portal (HSCAP) guidelines for Bio Science and Commerce with Computer Application. Visit the school office with required documents during allotment dates for verification.</div>
+                <div class="faq-a">Higher Secondary admissions follow the Kerala DHSE Single Window Admission Portal (HSCAP) guidelines for Bio Science and Commerce with Computer Application. There are reserved seats for Community Quota and Management Quota admissions, for which admission procedure information is available from the school office. Visit the school office with required documents during allotment dates for verification.</div>
               </div>
             </div>
           </div>
